@@ -1,0 +1,6 @@
+{
+  "name": "KaloFit",
+  "description": "Free bilingual Persian and English nutrition and calorie tracker with Room database, multi-provider AI support, and Mifflin-St Jeor calculation engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

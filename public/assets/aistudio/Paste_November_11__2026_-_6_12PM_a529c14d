@@ -1,0 +1,2137 @@
+# CALO FIT — FINAL AUTONOMOUS ANDROID DEVELOPMENT MASTER PROMPT
+## Persian-First Intelligent Nutrition & Wellness Application
+### Production-Oriented | Offline-First | Lightweight | Iran-Compatible
+
+---
+
+# 1. PROJECT IDENTITY
+
+**Application Name:** Calo Fit  
+**Persian Name:** کالو فیت  
+**Package Name:** com.calofit.app  
+**Platform:** Native Android  
+**Primary Language:** Persian (fa-IR)  
+**Secondary Language:** English (en-US)  
+**Programming Language:** Kotlin  
+**UI:** Jetpack Compose  
+**Architecture:** MVVM + Clean Architecture principles  
+**Database:** Room  
+**Preferences:** DataStore  
+**Navigation:** Navigation Compose  
+**Background Tasks:** WorkManager  
+**Business Model:** Freemium  
+**Deployment:** Android APK / AAB when supported  
+**Primary Market:** Iran  
+**Primary Requirement:** A complete, functional Android application that requires no personally owned server and works reliably without an internet connection.
+
+# 2. YOUR ROLE
+
+Act as an autonomous senior Android development team:
+
+- Principal Android Architect
+- Senior Kotlin Developer
+- UI/UX Designer
+- Database Engineer
+- Nutrition Calculation Specialist
+- AI Integration Engineer
+- Security Engineer
+- Performance Engineer
+- QA Engineer
+
+Your responsibility is to build, implement, test, debug, and deliver the actual application.
+
+I do not want a tutorial, conceptual proposal, static mockup, or nonfunctional prototype.
+
+I want real application files and working software.
+
+Use the actual capabilities available in Google AI Studio.
+
+Do not pretend that unavailable tools, integrations, emulators, or export functions exist.
+
+Do not claim that a feature is implemented, compiled, tested, or verified unless it actually is.
+
+# 3. STRICT DEVELOPMENT REQUIREMENTS
+
+First inspect the actual development environment.
+
+Determine:
+
+- Whether native Android development is supported.
+- Whether Kotlin and Jetpack Compose can be used.
+- Whether Gradle builds are supported.
+- Whether project files can be created and edited.
+- Whether an Android emulator is available.
+- Whether APK or AAB export is supported.
+- Which integrations are actually available.
+
+Build a genuine native Android application.
+
+Required technologies:
+
+- Kotlin
+- Jetpack Compose
+- Material 3
+- AndroidX
+- Coroutines
+- StateFlow
+- ViewModel
+- Room
+- DataStore
+- Navigation Compose
+- WorkManager
+
+Do not create a website, React application, Flutter application, React Native application, or WebView substitute.
+
+Use a single application module unless the actual environment requires another structure.
+
+Organize source code into logical packages.
+
+Do not ask me to approve ordinary programming operations.
+
+Create files, implement features, fix errors, and continue development autonomously.
+
+If native Android development is unsupported in the current environment, explain the actual limitation and provide the closest genuinely supported deliverable. Never misrepresent a web application as a native Android application.
+
+# 4. CRITICAL REQUIREMENT — IRAN COMPATIBILITY
+
+This application is primarily designed for users in Iran.
+
+Its operation must not depend on services that may be blocked, filtered, unavailable, or unreliable in Iran.
+
+This is a fundamental architectural requirement.
+
+## 4.1. No personal server
+
+I do not own a server.
+
+Do not require:
+
+- VPS
+- Linux server
+- Docker
+- Personal backend
+- Custom API server
+- Self-hosted database
+- Manual server administration
+- Mandatory cloud hosting
+- Backend deployment
+
+All essential application functionality must run directly on Android.
+
+## 4.2. No mandatory foreign services
+
+Never make any of these services mandatory for application startup or essential functionality:
+
+- Firebase
+- Firebase Authentication
+- Google Sign-In
+- Google Play Services
+- Gemini
+- Google AI APIs
+- Google Fonts
+- Google-hosted databases
+- Open Food Facts
+- USDA API
+- Any external API
+- Any external website
+
+These services may be optional integrations, but the application must never break if they are inaccessible.
+
+Do not assume Google services are available on every Iranian Android device.
+
+Use local resources wherever possible.
+
+## 4.3. Network resilience
+
+Implement a network-independent core architecture.
+
+Requirements:
+
+1. No mandatory network request during application startup.
+2. No endless loading when internet is unavailable.
+3. No automatic repeated API requests.
+4. No blocking calls on the main thread.
+5. No crash when DNS resolution fails.
+6. No crash when a service is blocked.
+7. No crash when TLS connections fail.
+8. No dependency on foreign CDNs.
+9. No mandatory online license validation.
+10. No mandatory remote configuration.
+11. No mandatory account verification.
+12. No mandatory cloud synchronization.
+
+All external requests must be optional, asynchronous, cancellable, and protected by timeouts.
+
+Use reasonable retry limits and exponential backoff.
+
+Do not repeatedly retry unavailable services.
+
+Provide clear offline messages in the selected language.
+
+Do not use VPN requirements as a workaround.
+
+Do not automatically change DNS or network settings.
+
+The application must never instruct users to bypass network restrictions.
+
+## 4.4. Local assets
+
+Bundle necessary assets inside the application:
+
+- Fonts.
+- Icons.
+- Initial food database.
+- Localization files.
+- Illustrations.
+- Essential graphics.
+- Calculation resources.
+
+Do not download essential assets during startup.
+
+Use locally bundled Persian fonts with appropriate licensing.
+
+# 5. PERFORMANCE — NON-NEGOTIABLE
+
+The application must be lightweight and responsive on ordinary mid-range Android phones.
+
+Do not sacrifice performance to add visual effects or unnecessary features.
+
+Prioritize:
+
+1. Fast startup.
+2. Smooth scrolling.
+3. Low memory usage.
+4. Low battery consumption.
+5. Efficient database access.
+6. Minimal background processing.
+7. Fast screen transitions.
+8. Responsive controls.
+
+Engineering requirements:
+
+- Avoid unnecessary dependencies.
+- Avoid duplicate libraries.
+- Avoid expensive rendering effects.
+- Avoid continuous animations.
+- Avoid excessive recomposition.
+- Avoid unnecessary background services.
+- Avoid oversized images.
+- Avoid loading the entire food database into memory.
+- Use database pagination where appropriate.
+- Use efficient Room queries and indices.
+- Use lazy lists for large datasets.
+- Use caching where useful.
+- Use image compression and appropriate image sizes.
+- Move expensive calculations off the main thread.
+- Use stable UI state.
+- Cancel unnecessary background work.
+
+Target smooth 60 FPS on supported mid-range devices.
+
+Do not claim performance measurements unless actual profiling has been performed.
+
+If an effect causes lag, simplify it.
+
+Do not use full-screen real-time blur or multiple expensive rendering layers.
+
+# 6. VISUAL DESIGN SYSTEM
+
+Preserve and refine the existing Calo Fit visual identity.
+
+Use an elegant, modern, premium, translucent interface with restrained depth, soft highlights, subtle shadows, and rounded components.
+
+The interface must look professionally designed.
+
+Avoid generic dashboards and flat, visually inconsistent components.
+
+Use the existing uploaded visual references when they are available in the development environment.
+
+Do not assume that previously uploaded images remain accessible. If they are unavailable, preserve the existing project design rather than inventing a different brand.
+
+## 6.1. Color palette
+
+Light theme:
+
+- Background: #F1F5F5
+- Secondary background: #E9EEEE
+- Primary accent: #A6ED37
+- Secondary accent: #C5F46B
+- Primary text: #222A2A
+- Secondary text: #737D80
+- Success: #43B98A
+- Warning: #F2B85B
+- Error: #E46C79
+
+Dark theme:
+
+- Background: #101716
+- Secondary background: #171F1E
+- Primary accent: #B5F34B
+- Secondary accent: #8CCF35
+- Primary text: #F1F5F0
+- Secondary text: #A1ADA7
+
+Use centralized semantic color tokens.
+
+Do not hardcode colors independently on each screen.
+
+## 6.2. Appearance settings
+
+The user must have exactly three appearance options:
+
+- روشن
+- تاریک
+- مطابق سیستم
+
+English:
+
+- Light
+- Dark
+- Follow system
+
+Do not use the expressions:
+
+- Liquid Glass
+- Light Liquid Glass
+- Dark Liquid Glass
+- شیشه مایع
+- شیشه‌ای مایع
+
+These terms must not appear in any user-facing text, setting, menu, button, notification, or description.
+
+The visual appearance can retain its existing translucent, polished, layered design.
+
+The appearance selection must work immediately and persist through application restarts.
+
+Do not lose data when changing themes.
+
+## 6.3. Reusable components
+
+Create reusable components for:
+
+- Cards
+- Buttons
+- Text fields
+- Search fields
+- Dropdowns
+- Selection controls
+- Switches
+- Tabs
+- Navigation
+- Dialogs
+- Progress indicators
+- Charts
+- Bottom sheets
+- Food list items
+- Nutrition indicators
+
+Maintain consistent spacing, typography, corner radii, shadows, and interaction states.
+
+Every visible control must perform its advertised action.
+
+# 7. CRITICAL — COMPLETE LANGUAGE CONSISTENCY
+
+This is one of the highest-priority requirements.
+
+The entire application must use one consistent language at a time.
+
+If Persian is selected, EVERYTHING must be Persian.
+
+If English is selected, EVERYTHING must be English.
+
+Mixed-language interfaces are unacceptable.
+
+## 7.1. Language selection screen
+
+On the first launch, display the Calo Fit logo and language selection.
+
+The two language choices must contain ONLY these labels:
+
+**فارسی | Persian**
+
+**English | انگلیسی**
+
+Do not add explanatory subtitles, descriptions, or extra text underneath the language options.
+
+Do not display redundant descriptions such as:
+
+- Right-to-left with Jalali calendar.
+- Left-to-right with Gregorian calendar.
+- زبان فارسی با تقویم شمسی.
+- English with international units.
+
+Keep the screen clean and minimal.
+
+Provide one continue button:
+
+Persian: ادامه و ورود
+
+English: Continue
+
+Persist the selection.
+
+On subsequent launches, skip language selection.
+
+Allow changing language later in Settings.
+
+## 7.2. Persian localization
+
+When Persian is selected:
+
+- All interface text must be Persian.
+- All buttons must be Persian.
+- All menus must be Persian.
+- All dialogs must be Persian.
+- All errors must be Persian.
+- All notifications must be Persian.
+- All charts must have Persian labels.
+- All accessibility descriptions must be Persian.
+- All food categories must be Persian.
+- All nutritional labels must be Persian.
+- All measurement units must be understandable in Persian.
+- All validation messages must be Persian.
+- All AI responses must be Persian.
+- All loading and empty states must be Persian.
+
+Use natural, understandable Persian.
+
+Avoid unnecessary English technical abbreviations.
+
+Examples:
+
+Calories → کالری
+
+Protein → پروتئین
+
+Carbohydrates → کربوهیدرات
+
+Fat → چربی
+
+Fiber → فیبر
+
+Sugar → قند
+
+Sodium → سدیم
+
+Water → آب
+
+Weight → وزن
+
+Height → قد
+
+Daily goal → هدف روزانه
+
+Serving size → مقدار مصرف
+
+Breakfast → صبحانه
+
+Lunch → ناهار
+
+Dinner → شام
+
+Snack → میان‌وعده
+
+Grams → گرم
+
+Kilograms → کیلوگرم
+
+Milliliters → میلی‌لیتر
+
+Do not display unexplained labels such as:
+
+- kcal
+- g
+- mg
+- ml
+- BMR
+- TDEE
+- P
+- C
+- F
+
+Instead, display understandable Persian labels.
+
+For example:
+
+Incorrect:
+P: 28g | C: 32g | F: 27g
+
+Correct:
+پروتئین: ۲۸ گرم
+کربوهیدرات: ۳۲ گرم
+چربی: ۲۷ گرم
+
+If technical abbreviations are necessary, provide their Persian explanation.
+
+## 7.3. English localization
+
+When English is selected:
+
+All text must be natural English.
+
+Do not display Persian labels, messages, or notifications.
+
+Use appropriate English units and standard nutrition terminology.
+
+## 7.4. RTL and LTR
+
+Persian:
+
+- Correct RTL layout.
+- Proper alignment.
+- Correct navigation direction.
+- Proper text field direction.
+- Correct chart labels.
+- Correct dialog alignment.
+
+English:
+
+- Correct LTR layout.
+- Correct navigation direction.
+- Correct text alignment.
+
+Use Android locale-aware resource management.
+
+Never hardcode interface strings inside business logic.
+
+Do not translate user-entered names or food names automatically without the user's permission.
+
+## 7.5. Numbers and calendar
+
+Persian settings must support:
+
+- Jalali calendar.
+- Persian or Latin digits.
+- Persian number formatting.
+
+English settings must support:
+
+- Gregorian calendar.
+- International number formatting.
+
+Calendar and number format must be independently configurable.
+
+Changing the interface language must not delete or alter historical records.
+
+Store dates internally in a stable, timezone-aware format.
+
+Convert dates for display.
+
+# 8. CRITICAL — FORM FIELD LABELS
+
+Every form field must clearly explain what information the user should enter.
+
+Never display an unexplained empty field.
+
+Never rely exclusively on placeholder text.
+
+This rule applies to the entire application.
+
+For every field:
+
+1. Display a visible label above or beside the input.
+2. Provide an understandable placeholder.
+3. Display the correct unit where necessary.
+4. Explain optional fields when useful.
+5. Validate input.
+6. Display errors in the selected language.
+
+Example: Add custom food.
+
+Incorrect:
+
+[Empty field]
+[Empty field]
+[5]
+[15]
+[Carbs (g)]
+
+Correct Persian:
+
+نام غذا
+[مثلاً برنج پخته]
+
+مقدار مصرف
+[مثلاً ۱۰۰]
+
+کالری
+[مثلاً ۱۵۰]
+
+پروتئین (گرم)
+[مثلاً ۵]
+
+کربوهیدرات (گرم)
+[مثلاً ۲۸]
+
+چربی (گرم)
+[مثلاً ۲]
+
+Correct English:
+
+Food name
+[Example: Cooked rice]
+
+Serving amount
+[Example: 100]
+
+Calories
+[Example: 150]
+
+Protein (g)
+[Example: 5]
+
+Carbohydrates (g)
+[Example: 28]
+
+Fat (g)
+[Example: 2]
+
+Apply this rule to:
+
+- Onboarding.
+- Profile.
+- Custom food creation.
+- Recipe creation.
+- Meal logging.
+- Weight entry.
+- Water entry.
+- Activity entry.
+- Food search.
+- Grocery lists.
+- Nutrition goals.
+- Settings.
+- AI input forms.
+- Backup and restoration.
+- Any future forms.
+
+For numerical inputs, provide suitable keyboard types.
+
+Do not confuse placeholders with field labels.
+
+# 9. APPLICATION NAVIGATION
+
+Use four primary navigation destinations:
+
+1. Home
+2. Food Log
+3. Progress
+4. Profile
+
+Persian labels:
+
+1. خانه
+2. ثبت غذا
+3. پیشرفت
+4. پروفایل
+
+Implement actual navigation and functional screens.
+
+Required screens:
+
+- Language Selection
+- Welcome
+- Onboarding
+- Personal Profile
+- Home Dashboard
+- Food Search
+- Food Details
+- Add Food
+- Custom Food
+- Food Image Recognition
+- Barcode Scanner
+- Meal History
+- Meal Details
+- Recipe Creator
+- Weight Tracking
+- Weight History
+- Water Tracking
+- Activity Tracking
+- AI Nutrition Coach
+- Smart Kitchen
+- Weekly Meal Planner
+- Grocery List
+- Food Comparison
+- Reports
+- Achievements
+- Settings
+- Appearance Settings
+- Regional Settings
+- Notification Settings
+- Premium
+- Privacy
+- Support
+- About
+- Data Export
+- Data Management
+
+Do not create empty screens simply to increase the number of features.
+
+Implement each feature properly before making it visible.
+
+# 10. ONBOARDING AND USER PROFILE
+
+Create a simple, attractive onboarding experience.
+
+Collect:
+
+- First name.
+- Age or date of birth.
+- Appropriate metabolic calculation profile.
+- Height.
+- Current weight.
+- Activity level.
+- Weight goal.
+- Target weight.
+- Preferred rate of weight change.
+- Dietary preferences.
+- Allergies.
+- Optional dietary restrictions.
+
+Allow users to skip optional questions.
+
+Do not force collection of sensitive health information.
+
+Every question must have a clear visible label.
+
+Provide explanations when necessary.
+
+Allow editing the profile later.
+
+Support:
+
+- Weight loss.
+- Weight maintenance.
+- Weight gain.
+- General healthy eating.
+
+Do not generate automatic weight-loss targets for minors, pregnant users, breastfeeding users, or users requiring specialized medical nutrition management.
+
+# 11. NUTRITION CALCULATION ENGINE
+
+Create a separate, reusable, testable calculation module.
+
+Do not place business calculations inside Compose screens.
+
+## BMI
+
+BMI = weight (kg) / height (m)²
+
+Display appropriate adult categories.
+
+Explain that BMI is a screening measure, not a complete health assessment.
+
+Do not apply adult BMI categories to children.
+
+## BMR
+
+Use Mifflin-St Jeor.
+
+Male:
+
+BMR = 10 × weight + 6.25 × height - 5 × age + 5
+
+Female:
+
+BMR = 10 × weight + 6.25 × height - 5 × age - 161
+
+Use:
+
+- Weight in kg.
+- Height in cm.
+- Age in years.
+
+Allow selection of the appropriate calculation profile.
+
+Never infer it from the user's name.
+
+## TDEE
+
+Calculate estimated daily energy expenditure using configurable activity multipliers.
+
+## Nutrition targets
+
+Calculate:
+
+- Daily calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Fiber.
+- General hydration guidance.
+
+Support customizable targets with appropriate safety boundaries.
+
+Clearly distinguish estimates from exact measurements.
+
+Write unit tests for all calculations.
+
+# 12. COMPREHENSIVE IRANIAN FOOD DATABASE
+
+This is a major competitive advantage.
+
+Create a structured, searchable, expandable offline food database.
+
+Bundle a useful initial dataset inside the APK.
+
+Food search must work completely offline.
+
+Prioritize Iranian food rather than relying exclusively on international food databases.
+
+## Iranian foods
+
+Include:
+
+- قورمه‌سبزی
+- قیمه
+- فسنجان
+- زرشک‌پلو
+- عدس‌پلو
+- لوبیاپلو
+- آبگوشت
+- انواع کباب
+- جوجه‌کباب
+- چلو
+- برنج کته
+- برنج آبکش
+- نان سنگک
+- نان بربری
+- نان لواش
+- نان تافتون
+- آش رشته
+- انواع سوپ
+- انواع خوراک
+- ماست
+- دوغ
+- پنیر
+- تخم‌مرغ
+- میوه‌ها
+- سبزیجات
+- حبوبات
+- مغزها
+- تنقلات رایج ایرانی
+
+Include international foods as well.
+
+## Nutritional data
+
+Each food should support:
+
+- Food name.
+- Serving size.
+- Measurement unit.
+- Weight in grams.
+- Calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Fiber.
+- Sugar.
+- Sodium when available.
+- Source.
+- Verification status.
+
+Classify information as:
+
+- Verified.
+- Estimated.
+- User-entered.
+
+Never fabricate exact nutritional values.
+
+When reliable information is unavailable, clearly label the value as estimated.
+
+## Food database architecture
+
+Use Room.
+
+Implement:
+
+- Efficient search.
+- Search by Persian and English names.
+- Search by category.
+- Search by ingredients.
+- Favorites.
+- Recently used foods.
+- Custom foods.
+- Custom recipes.
+
+Use pagination for large datasets.
+
+Do not load the entire database into memory unnecessarily.
+
+Use USDA and Open Food Facts as optional sources when legally and technically accessible.
+
+Never make them mandatory.
+
+Respect source licensing and attribution.
+
+# 13. IRANIAN HOUSEHOLD MEASUREMENTS
+
+Support practical household units.
+
+Persian measurements:
+
+- قاشق غذاخوری
+- قاشق چای‌خوری
+- ملاقه
+- کفگیر
+- لیوان
+- استکان
+- کف دست نان
+- یک عدد
+- یک برش
+- یک پرس
+- یک کاسه
+
+Allow conversion into grams when reliable conversion data exists.
+
+Do not assume all foods have the same weight per household unit.
+
+Use food-specific conversion values.
+
+For uncertain conversions, ask the user or display an estimate.
+
+Allow manual gram entry.
+
+# 14. FOOD LOGGING
+
+Support:
+
+- Breakfast.
+- Morning snack.
+- Lunch.
+- Afternoon snack.
+- Dinner.
+- Evening snack.
+
+Users must be able to:
+
+- Add food.
+- Edit food.
+- Delete food.
+- Duplicate meals.
+- Save favorites.
+- Create recipes.
+- Reuse previous meals.
+- Change portions.
+- Correct nutrition values.
+
+Every entry must preserve:
+
+- Food ID.
+- Food name.
+- Quantity.
+- Unit.
+- Gram weight.
+- Calories.
+- Macronutrients.
+- Date.
+- Time.
+- Meal category.
+
+Update daily totals immediately.
+
+Use database transactions.
+
+Preserve historical nutritional snapshots when database records change.
+
+# 15. SMART IRANIAN MEAL ASSISTANT
+
+Create an intelligent Persian food recognition workflow.
+
+The user should be able to describe food naturally.
+
+Example:
+
+«برای ناهار یک بشقاب عدس‌پلو با کشمش و کمی گوشت خوردم.»
+
+The system should:
+
+1. Identify possible ingredients.
+2. Ask about important missing details.
+3. Estimate serving size.
+4. Calculate estimated calories.
+5. Calculate protein, carbohydrates, and fat.
+6. Display assumptions.
+7. Allow editing.
+8. Request confirmation before saving.
+
+Understand conversational Persian.
+
+Do not require formal language.
+
+For mixed dishes, account for recipe variations.
+
+Do not invent hidden ingredients or exact quantities.
+
+# 16. FOOD IMAGE RECOGNITION
+
+Support optional AI food recognition.
+
+Allow:
+
+- Camera capture.
+- Gallery selection.
+- Image preview.
+- Cropping.
+- Analysis.
+- Editing results.
+- Confirmation before saving.
+
+Recognize possible:
+
+- Food names.
+- Visible ingredients.
+- Cooking methods.
+- Serving sizes.
+- Estimated weight.
+- Calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+
+Photographs cannot reliably reveal exact food weight, hidden ingredients, or cooking oil quantities.
+
+Always:
+
+- Mark results as estimates.
+- Display uncertainty.
+- Ask clarifying questions.
+- Allow corrections.
+- Require confirmation before saving.
+- Avoid pretending that an estimate is exact.
+
+Manual food logging must always work without AI.
+
+Do not upload photos without appropriate consent.
+
+Delete temporary images when no longer needed.
+
+# 17. PERSIAN VOICE FOOD LOGGING
+
+Implement optional speech-based food entry.
+
+Example:
+
+«یک کفگیر برنج و دو تکه مرغ خوردم.»
+
+Extract:
+
+- Food names.
+- Quantities.
+- Meal category.
+- Possible preparation method.
+
+Display the extracted information in an editable form.
+
+Require confirmation before saving.
+
+Use Android speech recognition when genuinely available.
+
+Do not require Google speech services.
+
+Provide manual text entry when offline or when speech recognition is unavailable.
+
+Do not request microphone permission until the user activates voice entry.
+
+# 18. SMART KITCHEN
+
+Create a feature called:
+
+Persian: آشپز هوشمند
+
+English: Smart Kitchen
+
+Allow users to enter available ingredients and discover suitable meals.
+
+Consider:
+
+- Available ingredients.
+- Nutrition goals.
+- Allergies.
+- Food preferences.
+- Preparation time.
+- Budget.
+- Number of servings.
+
+Generate recipes with:
+
+- Ingredients.
+- Quantities.
+- Preparation instructions.
+- Preparation time.
+- Calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Estimated cost when reliable price information exists.
+
+Provide Iranian recipes and affordable alternatives.
+
+Allow users to save recipes.
+
+Allow ingredients to be added to the grocery list.
+
+Provide a fully functional manual offline mode.
+
+# 19. ADAPTIVE NUTRITION COACH
+
+Create a personalized nutrition analysis feature.
+
+Analyze actual historical data:
+
+- Weight changes.
+- Food records.
+- Calorie averages.
+- Macronutrient intake.
+- Hydration.
+- Physical activity.
+- Goal consistency.
+
+Provide weekly feedback.
+
+Explain patterns in simple language.
+
+Distinguish actual observations from recommendations.
+
+Do not automatically change goals without user consent and safety checks.
+
+Never encourage extreme diets.
+
+Never shame users.
+
+# 20. SMART FOOD COMPARISON
+
+Allow comparison of multiple foods.
+
+Compare:
+
+- Calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Fiber.
+- Serving size.
+- Cost when reliable data exists.
+
+Explain which choice better matches the selected goal.
+
+Do not classify foods as universally good or bad.
+
+# 21. AFFORDABLE IRANIAN MEAL PLANNER
+
+Create a budget-aware meal planner.
+
+Collect:
+
+- Food budget.
+- Number of people.
+- Dietary preferences.
+- Allergies.
+- Available ingredients.
+- Cooking time.
+
+Generate:
+
+- Breakfast.
+- Lunch.
+- Dinner.
+- Snacks.
+- Weekly grocery list.
+- Ingredient quantities.
+- Estimated nutritional values.
+- Estimated cost.
+
+Optimize shared ingredients to reduce waste.
+
+Never invent current Iranian market prices.
+
+Use user-entered prices or accessible, trustworthy price sources.
+
+Clearly show when prices were last updated.
+
+If price services are inaccessible, continue with user-entered prices.
+
+Provide manual offline planning.
+
+# 22. FLEXIBLE FOOD TRACKING
+
+Support four tracking modes:
+
+1. Detailed calorie tracking.
+2. Household portion tracking.
+3. Simple meal logging.
+4. Habit-focused tracking.
+
+Allow users to hide calorie values.
+
+Allow users to focus on consistency rather than numbers.
+
+Avoid shame-based messages.
+
+# 23. WEIGHT TRACKING
+
+Implement:
+
+- Add weight.
+- Edit weight.
+- Delete weight.
+- Weight history.
+- Target weight.
+- Progress.
+- Trend analysis.
+
+Charts:
+
+- 7 days.
+- 30 days.
+- 3 months.
+- 6 months.
+- 1 year.
+- All history.
+
+Use actual records only.
+
+Support kg and lb.
+
+Handle irregular measurement intervals.
+
+Avoid misleading trend lines.
+
+# 24. WATER TRACKING
+
+Implement:
+
+- Daily hydration guidance.
+- Add water.
+- Custom volume.
+- Common serving sizes.
+- Water history.
+- Daily progress.
+- Optional reminders.
+
+Allow customization.
+
+Never present one fixed hydration target as appropriate for every person.
+
+# 25. PHYSICAL ACTIVITY
+
+Support:
+
+- Walking.
+- Running.
+- Cycling.
+- Strength training.
+- Home workouts.
+- Other activities.
+
+Allow manual entry.
+
+Record:
+
+- Activity type.
+- Duration.
+- Date.
+- Time.
+- Estimated energy expenditure.
+
+Clearly mark estimated calories.
+
+Avoid double-counting exercise calories.
+
+Do not require location permission for manual activity tracking.
+
+# 26. AI NUTRITION COACH
+
+Create an optional conversational nutrition assistant.
+
+It must:
+
+- Respond in the selected language.
+- Understand authorized food-log information.
+- Understand nutrition goals.
+- Explain nutrition.
+- Suggest balanced meals.
+- Answer food questions.
+- Explain calories and macronutrients.
+- Encourage sustainable habits.
+
+Never:
+
+- Diagnose disease.
+- Prescribe medication.
+- Recommend dangerous diets.
+- Encourage extreme calorie restriction.
+- Invent scientific sources.
+- Present AI responses as medical advice.
+
+Clearly identify uncertainty.
+
+Provide professional-care guidance where appropriate.
+
+Allow users to delete conversation history.
+
+# 27. AI ARCHITECTURE AND GEMINI
+
+Create modular AI interfaces.
+
+Suggested components:
+
+- AIService
+- GeminiProvider
+- AIProviderRouter
+- AIFallbackHandler
+- AIUsageManager
+
+Gemini is optional.
+
+Do not make Firebase AI Logic, Firebase App Check, or any Google service a mandatory application dependency.
+
+Never embed private API keys or secrets in the APK.
+
+Do not hardcode credentials.
+
+If a supported, secure AI configuration is available, implement it.
+
+Otherwise, provide an integration interface and document the missing configuration.
+
+Do not activate paid services without authorization.
+
+AI workflow:
+
+1. Check user request.
+2. Check connectivity.
+3. Check AI configuration.
+4. Validate input.
+5. Send minimum necessary data.
+6. Process response.
+7. Validate structured output.
+8. Display results.
+9. Allow corrections.
+10. Handle errors gracefully.
+
+Use:
+
+- Timeouts.
+- Retry limits.
+- Request cancellation.
+- Usage limits.
+- Error handling.
+- Cost awareness.
+
+Never pretend that AI is working when the provider is unavailable.
+
+Never require AI for basic functionality.
+
+# 28. BARCODE SCANNER
+
+Implement optional barcode scanning using a supported Android library.
+
+Support:
+
+- Camera preview.
+- Barcode detection.
+- Product lookup.
+- Manual fallback.
+- Search history.
+- Local caching.
+
+Use Open Food Facts or another suitable provider only when accessible.
+
+Do not require Google Play Services if an alternative supported implementation exists.
+
+Distinguish barcode detection from online product lookup.
+
+Unknown barcodes must not generate fabricated nutritional information.
+
+Allow manual product creation.
+
+# 29. REPORTS AND ANALYTICS
+
+Create weekly and monthly reports.
+
+Include:
+
+- Average calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Water.
+- Weight changes.
+- Activity.
+- Goal consistency.
+- Meal patterns.
+
+Charts:
+
+- Weekly.
+- Monthly.
+- Long-term.
+
+Support:
+
+- PDF export.
+- CSV export.
+- Sharing.
+- Historical reports.
+
+Use actual records.
+
+Never manufacture missing data.
+
+Reports must work offline.
+
+# 30. GAMIFICATION
+
+Implement:
+
+- Daily streaks.
+- Achievement badges.
+- Weekly challenges.
+- Habit tracking.
+- Positive encouragement.
+
+Reward:
+
+- Consistency.
+- Balanced eating.
+- Hydration.
+- Sustainable habits.
+
+Never reward extreme calorie restriction or rapid weight loss.
+
+Allow disabling gamification.
+
+# 31. DATABASE AND PERSISTENCE
+
+Use Room for all essential local records.
+
+Suggested entities:
+
+- UserProfile
+- FoodItem
+- FoodEntry
+- Meal
+- Recipe
+- WeightRecord
+- WaterRecord
+- ActivityRecord
+- NutritionGoal
+- FavoriteFood
+- FoodBarcode
+- ReminderSettings
+- AIUsageRecord
+- Achievement
+- UserPreferences
+- GroceryList
+- GroceryItem
+
+Implement:
+
+- Primary keys.
+- Foreign keys.
+- Indices.
+- Relationships.
+- Transactions.
+- Validation.
+- Database migrations.
+- Stable IDs.
+
+Use DataStore for preferences.
+
+Preserve data through application restarts and updates.
+
+Never reset the database during ordinary updates.
+
+Implement safe backup and restoration.
+
+Use a versioned backup format.
+
+Support JSON and CSV export.
+
+Use Android Storage Access Framework for user-controlled file access.
+
+Validate imported files before restoration.
+
+Never silently delete user data.
+
+# 32. STRICT OFFLINE FUNCTIONALITY
+
+The following features MUST work without internet:
+
+- Application startup.
+- Language selection.
+- Persian and English interfaces.
+- Onboarding.
+- User profile.
+- Nutrition calculations.
+- BMI.
+- BMR.
+- TDEE.
+- Calorie goals.
+- Macronutrients.
+- Initial food database.
+- Food search.
+- Manual food logging.
+- Meal management.
+- Recipes.
+- Household measurements.
+- Weight tracking.
+- Water tracking.
+- Activity tracking.
+- Historical records.
+- Charts.
+- Basic reports.
+- Settings.
+- Appearance switching.
+- Local reminders.
+- Data export.
+- Backup and restoration.
+
+Online-dependent features may include:
+
+- Gemini AI.
+- Online food recognition.
+- Barcode product lookup.
+- Cloud synchronization.
+- Subscription verification.
+- External price lookup.
+
+When offline:
+
+- Preserve all user data.
+- Continue core functionality.
+- Display clear offline states.
+- Never show fake synchronization success.
+- Never pretend AI is responding.
+- Never block application startup.
+
+# 33. SECURITY AND PRIVACY
+
+Treat personal nutrition information as sensitive.
+
+Implement:
+
+- Minimum permissions.
+- Input validation.
+- Secure local storage where appropriate.
+- Android Keystore where justified.
+- HTTPS for optional network communication.
+- Controlled image uploads.
+- User-controlled deletion.
+- Transparent privacy disclosures.
+
+Never expose API secrets.
+
+Never transmit personal data or images without appropriate consent.
+
+Never log private health information.
+
+Allow:
+
+- Exporting personal data.
+- Deleting local data.
+- Deleting AI history.
+- Deleting optional cloud data when cloud services exist.
+
+Explain which information stays on the device and which may be transmitted externally.
+
+# 34. LOCAL NOTIFICATIONS
+
+Use Android notifications and WorkManager where appropriate.
+
+Support:
+
+- Water reminders.
+- Meal reminders.
+- Weight reminders.
+- Activity reminders.
+- Daily goals.
+
+Requirements:
+
+- Local scheduling.
+- User-controlled reminders.
+- Enable/disable.
+- Quiet hours.
+- Localized notifications.
+- Time-zone awareness.
+
+Do not use remote push notifications as a requirement.
+
+Do not request notification permission unnecessarily.
+
+# 35. FREEMIUM AND PREMIUM
+
+Keep the free version genuinely useful.
+
+Free features:
+
+- Profile.
+- Nutrition calculations.
+- Manual food logging.
+- Iranian food database.
+- Household measurements.
+- Weight tracking.
+- Water tracking.
+- Activity tracking.
+- Basic charts.
+- Basic reports.
+- Custom recipes.
+- Basic food comparison.
+- Limited optional AI usage.
+
+Premium features:
+
+- Advanced AI recognition.
+- Higher AI limits.
+- AI Nutrition Coach.
+- Smart Kitchen.
+- Advanced meal planning.
+- Budget-aware planning.
+- Advanced reports.
+- Extended analytics.
+- Advanced personalization.
+
+Do not hardcode prices.
+
+Use configurable regional pricing.
+
+Do not require a subscription for essential offline features.
+
+Do not unlock Premium using an unverified local Boolean.
+
+If a genuine payment provider is unavailable, disable purchasing and document the missing integration.
+
+# 36. PAYMENT AND ADVERTISING
+
+Prepare modular integration interfaces for:
+
+- Google Play Billing.
+- Cafe Bazaar.
+- Myket.
+- Other genuinely supported providers.
+
+Do not assume any provider is accessible or available.
+
+Never require Google Play Billing for the application to operate.
+
+Keep purchases disabled until a real supported provider is configured.
+
+Do not fake payment verification.
+
+Advertising must be optional and disabled by default when no suitable provider is configured.
+
+Avoid intrusive advertising.
+
+Support an ad-free Premium experience when actual billing is available.
+
+Never activate paid services without authorization.
+
+# 37. ACCESSIBILITY
+
+Support:
+
+- TalkBack.
+- Semantic descriptions.
+- Adequate contrast.
+- Scalable text.
+- Touch-friendly controls.
+- Keyboard navigation where appropriate.
+- Reduced motion.
+
+Never rely on color alone to communicate information.
+
+Keep text readable in both themes.
+
+# 38. DASHBOARD
+
+Create a personalized dashboard using actual user records.
+
+Include:
+
+- Personalized greeting.
+- Profile shortcut.
+- Daily calorie summary.
+- Circular progress.
+- Macronutrient progress.
+- Water progress.
+- Meal summary.
+- Weight progress.
+- Activity summary.
+- Nutrition charts.
+- Quick-add actions.
+
+Use actual database values.
+
+Never display random or fabricated statistics.
+
+Show empty states when records do not exist.
+
+Allow quick food entry without unnecessary navigation.
+
+# 39. APP ICON AND BRANDING
+
+Create an original Calo Fit launcher icon.
+
+Visual concept:
+
+- Healthy apple.
+- Leaf.
+- Nutrition.
+- Fitness.
+- Health.
+
+Use a clean, recognizable, premium design.
+
+Do not use an ordinary emoji as the final icon.
+
+Generate actual graphic assets when image generation is available.
+
+Otherwise use suitable vector and drawable assets.
+
+Prepare:
+
+- Adaptive launcher icon.
+- Foreground layer.
+- Background layer.
+- Splash screen assets.
+
+Do not claim a 3D asset was created if only a basic vector exists.
+
+# 40. VISUAL QUALITY CONTROL
+
+Inspect actual application screens where emulator rendering is available.
+
+Check:
+
+- Dashboard.
+- Food search.
+- Food logging.
+- Profile.
+- Settings.
+- Forms.
+- Charts.
+- Reports.
+- Dialogs.
+- Light appearance.
+- Dark appearance.
+- Persian RTL.
+- English LTR.
+- Different screen sizes.
+
+Check for:
+
+- Incorrect language mixing.
+- Missing field labels.
+- Text overflow.
+- Clipped controls.
+- Misaligned icons.
+- Incorrect RTL.
+- Unreadable charts.
+- Inconsistent spacing.
+- Slow scrolling.
+- Unnecessary animations.
+- Unreadable units.
+- Poor contrast.
+
+Do not stop after creating the home screen.
+
+# 41. TESTING
+
+Create and execute actual tests.
+
+Unit tests:
+
+- BMI.
+- BMR.
+- TDEE.
+- Calorie goals.
+- Macronutrients.
+- Portion calculations.
+- Food totals.
+- Weight trends.
+- Water totals.
+- Activity calculations.
+
+Database tests:
+
+- Insert.
+- Read.
+- Update.
+- Delete.
+- Relationships.
+- Persistence.
+- Migrations.
+- Backup.
+- Restoration.
+
+UI tests:
+
+- First launch.
+- Language selection.
+- Language persistence.
+- Language switching.
+- RTL.
+- LTR.
+- Onboarding.
+- Food logging.
+- Weight entry.
+- Water tracking.
+- Settings.
+- Theme switching.
+
+Offline tests:
+
+- Launch in airplane mode.
+- Search local foods.
+- Log meals.
+- Record weight.
+- Record water.
+- Open reports.
+- Restart the application.
+- Verify persistence.
+
+Network failure tests:
+
+- DNS failure.
+- Timeout.
+- Unavailable API.
+- Blocked service.
+- Invalid response.
+
+Never report tests as passed unless executed.
+
+Maintain accurate test reports.
+
+# 42. STORE PREPARATION
+
+Prepare assets and documentation for:
+
+- Google Play.
+- Cafe Bazaar.
+- Myket.
+
+Generate:
+
+- Application icon.
+- Store description.
+- Screenshots.
+- Privacy policy draft.
+- Terms of service draft.
+- Permission explanations.
+- Subscription disclosures.
+- Medical disclaimer.
+- Data safety information.
+
+Check actual current store requirements before finalization.
+
+Do not claim public publishing is complete without actual publication.
+
+# 43. IMPLEMENTATION ROADMAP
+
+Develop incrementally.
+
+Do not attempt to implement every feature superficially in one pass.
+
+## PHASE 1 — ESSENTIAL OFFLINE APPLICATION
+
+Build and verify:
+
+- Native Android project.
+- Branding.
+- Launcher icon.
+- Splash screen.
+- Design system.
+- Light theme.
+- Dark theme.
+- System theme.
+- Persian localization.
+- English localization.
+- RTL and LTR.
+- Language selection.
+- Onboarding.
+- Profile.
+- Nutrition calculations.
+- Room database.
+- DataStore.
+- Iranian food database.
+- International food database.
+- Household measurements.
+- Food search.
+- Manual food logging.
+- Custom foods.
+- Recipes.
+- Weight tracking.
+- Water tracking.
+- Activity tracking.
+- Charts.
+- Reports.
+- Settings.
+- Local reminders.
+- Backup and export.
+
+Acceptance:
+
+- Application compiles.
+- Application launches.
+- Language selection works.
+- No mixed-language interface.
+- All form fields have visible labels.
+- Food database works offline.
+- Food logging works.
+- Calculations work.
+- Records persist.
+- Both themes work.
+- No personal server is required.
+- Core application works in airplane mode.
+
+Complete this phase before expanding.
+
+## PHASE 2 — IRANIAN SMART FEATURES
+
+Implement:
+
+- Advanced Iranian food database.
+- Recipe variations.
+- Household measurement conversion.
+- Smart Persian meal entry.
+- Food comparison.
+- Smart Kitchen.
+- Grocery list.
+- Budget-aware meal planning.
+
+Provide manual offline functionality.
+
+## PHASE 3 — OPTIONAL AI
+
+Implement when genuinely available:
+
+- Gemini integration.
+- AI food recognition.
+- AI Nutrition Coach.
+- Persian voice food logging.
+- Personalized nutrition analysis.
+
+Do not make any of these mandatory.
+
+## PHASE 4 — ADVANCED FEATURES
+
+Implement:
+
+- Barcode scanning.
+- Advanced reports.
+- PDF export.
+- Advanced analytics.
+- Achievements.
+- Premium architecture.
+- Optional payments.
+- Optional cloud integration.
+
+## PHASE 5 — FINAL QUALITY
+
+Perform:
+
+- Compilation.
+- Unit tests.
+- Database tests.
+- UI tests.
+- Offline tests.
+- RTL/LTR review.
+- Performance review.
+- Security review.
+- Visual review.
+- Bug fixing.
+
+Preserve existing functionality.
+
+# 44. DEVELOPMENT CONTINUITY
+
+Maintain these files:
+
+- PROJECT_STATUS.md
+- IMPLEMENTATION_CHECKLIST.md
+- ARCHITECTURE.md
+- DATABASE_SCHEMA.md
+- TEST_REPORT.md
+- SECURITY_REVIEW.md
+- KNOWN_LIMITATIONS.md
+- SETUP_REQUIREMENTS.md
+
+Track each feature as:
+
+- Not Started
+- In Progress
+- Implemented
+- Compiled
+- Tested
+- Verified
+- Blocked
+- Requires External Configuration
+
+Preserve previous work.
+
+Do not reset project files unnecessarily.
+
+Do not delete user data.
+
+If execution limits are reached, document the exact state and next task.
+
+# 45. FINAL ACCEPTANCE CRITERIA
+
+The application is acceptable only when:
+
+1. It is a genuine native Android application.
+2. It launches successfully.
+3. It does not require a personal server.
+4. First launch displays language selection.
+5. The language options display only the requested labels.
+6. Persian works completely.
+7. English works completely.
+8. Mixed-language UI is eliminated.
+9. Persian RTL works.
+10. English LTR works.
+11. Every form field has a visible label.
+12. Measurement units are understandable.
+13. Appearance options are only روشن، تاریک، مطابق سیستم.
+14. No Liquid Glass terminology appears in user-facing text.
+15. Theme changes work.
+16. Theme selection persists.
+17. Profile information persists.
+18. Nutrition calculations work.
+19. Food search works offline.
+20. Iranian foods are supported.
+21. Household measurements work.
+22. Food logging works.
+23. Weight tracking works.
+24. Water tracking works.
+25. Activity tracking works.
+26. Charts use actual records.
+27. Backup and restoration work.
+28. AI is optional.
+29. Internet failure does not break the application.
+30. External services are never required for core functionality.
+31. The application does not unnecessarily consume memory or battery.
+32. Available automated tests are executed.
+33. Errors are handled.
+34. Missing dependencies are documented.
+35. An actual build is verified where supported.
+
+# 46. FINAL USER JOURNEY
+
+Test this exact journey:
+
+1. User installs Calo Fit.
+2. User opens the application.
+3. User sees the branded splash screen.
+4. User selects Persian or English.
+5. User sees no unnecessary language subtitles.
+6. User completes onboarding.
+7. User enters personal information.
+8. User sees clearly labeled form fields.
+9. User receives nutrition calculations.
+10. User searches for an Iranian food.
+11. User understands every displayed nutritional unit.
+12. User adds food to a meal.
+13. User sees updated nutritional totals.
+14. User records water intake.
+15. User records weight.
+16. User sees progress charts.
+17. User switches from light to dark appearance.
+18. The interface changes without losing data.
+19. User closes the application.
+20. User reopens it.
+21. All information remains intact.
+22. User activates airplane mode.
+23. Core application features continue working.
+
+This journey is more important than the number of advanced features.
+
+# 47. FINAL EXECUTION INSTRUCTIONS
+
+Begin immediately.
+
+1. Inspect the actual Google AI Studio environment.
+2. Inspect the existing project.
+3. Identify supported native Android capabilities.
+4. Inspect available reference images.
+5. Preserve existing useful implementation.
+6. Fix the requested language-selection interface.
+7. Eliminate mixed-language text.
+8. Add visible labels to every form field.
+9. Replace appearance names with روشن، تاریک، مطابق سیستم.
+10. Remove all user-facing Liquid Glass terminology.
+11. Audit network dependencies for Iran compatibility.
+12. Remove mandatory external service dependencies.
+13. Prioritize lightweight offline functionality.
+14. Implement the complete Phase 1.
+15. Compile and run where supported.
+16. Test the complete user journey.
+17. Fix actual errors.
+18. Continue with subsequent phases when possible.
+19. Generate actual installation and export artifacts when supported.
+20. Provide an honest implementation report.
+
+Do not spend excessive time explaining what you intend to do.
+
+Prioritize actual implementation.
+
+Do not ask me to create ordinary project files or write code manually.
+
+If an external action is unavoidable, explain exactly what is required, why it is required, and where I must perform it.
+
+Continue all unrelated development without waiting for external configuration.
+
+Never invent integrations, credentials, build results, or file paths.
+
+Never simulate a real feature and claim it works.
+
+Never sacrifice performance for unnecessary visual effects.
+
+Never sacrifice offline functionality for online integrations.
+
+Never sacrifice language consistency for convenience.
+
+---
+
+# FINAL PRODUCT VISION
+
+Calo Fit must become a reliable, intelligent, Persian-first nutrition companion designed around the real eating habits of Iranian users.
+
+Its competitive advantage must come from:
+
+- A comprehensive Iranian food database.
+- Accurate and transparent nutrition calculations.
+- Household food measurements.
+- Natural Persian food entry.
+- Intelligent Iranian meal recognition.
+- Affordable meal planning.
+- Smart Kitchen.
+- Personalized nutrition analysis.
+- Flexible food tracking.
+- Excellent bilingual localization.
+- Reliable offline operation.
+- Low resource consumption.
+- Strong privacy.
+
+**HIGHEST PRIORITY: A COMPLETE, FAST, RELIABLE, OFFLINE-FIRST NATIVE ANDROID APPLICATION.**
+
+**PRIMARY MARKET: IRAN.**
+
+**NO PERSONAL SERVER.**
+
+**NO MANDATORY GOOGLE OR FOREIGN CLOUD SERVICES.**
+
+**NO MANDATORY INTERNET CONNECTION.**
+
+**NO MIXED-LANGUAGE INTERFACE.**
+
+**EVERY FORM FIELD MUST HAVE AN EXPLICIT LABEL.**
+
+**APPEARANCE OPTIONS: LIGHT, DARK, FOLLOW SYSTEM.**
+
+**AI IS OPTIONAL, NEVER A REQUIREMENT FOR CORE FUNCTIONALITY.**
+
+**BUILD REAL SOFTWARE, TEST IT, FIX IT, AND DELIVER THE MOST COMPLETE ACTUAL PRODUCT THE ENVIRONMENT SUPPORTS.**
+
+**START IMPLEMENTATION NOW.**

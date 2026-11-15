@@ -1,0 +1,986 @@
+# CALO FIT – COMPLETE APP IMPROVEMENT & DEVELOPMENT PROMPT
+## Version 1.0 – Full Functional, UI/UX, AI, Localization, Performance and Security Update
+
+You are a senior Android developer, software architect, UI/UX designer, database engineer, and AI integration specialist.
+
+Your task is to thoroughly improve my existing Android application, **Calo Fit**, while preserving its current functionality, data, architecture, and visual identity wherever possible.
+
+This is an existing application, NOT a request to create a new app from scratch.
+
+Implement all requirements below carefully. Do not remove existing working features, break existing screens, introduce unnecessary dependencies, or replace functional code with mock implementations.
+
+The final application must be fast, stable, secure, lightweight, fully functional, and suitable for users in Iran, where internet access, international services, and AI providers may be restricted or unavailable.
+
+---
+
+# 1. APP VERSION
+
+- Set the application version to **Version 1.0**.
+- Display version 1.0 in the appropriate application information section in Settings.
+- Ensure the Android versionName and versionCode are configured correctly.
+- Do not reset existing user data when updating the application.
+
+# 2. COMPLETE LANGUAGE LOCALIZATION
+
+Implement a centralized and consistent localization system throughout the entire application.
+
+## Initial language selection screen
+
+On the first launch, show only these two language options:
+
+- فارسی | Persian
+- English
+
+Remove all additional explanatory subtitles and descriptions below these options.
+
+Keep the screen clean, simple, and visually attractive.
+
+## Strict language consistency
+
+If the user selects Persian:
+
+- All application texts must be Persian.
+- All buttons, menus, dialogs, labels, notifications, errors, validation messages, loading messages, and descriptions must be Persian.
+- All food-related information must be displayed in Persian.
+- All AI-generated responses must be Persian.
+- All charts, statistics, and reports must use Persian labels.
+- All measurement units and nutritional terminology must be understandable in Persian.
+- The interface must use proper RTL layout.
+- Numbers must automatically use Persian digits.
+
+If the user selects English:
+
+- All application texts must be English.
+- All buttons, menus, dialogs, notifications, errors, and descriptions must be English.
+- All AI responses must be English.
+- All charts and reports must use English labels.
+- The interface must use proper LTR layout.
+- Numbers must automatically use standard English digits.
+
+Never mix Persian and English interface text unintentionally.
+
+Examples:
+
+Persian:
+- کالری
+- پروتئین
+- کربوهیدرات
+- چربی
+- گرم
+- میلی‌لیتر
+- کالری دریافتی
+
+English:
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+- Grams
+- Milliliters
+- Calorie Intake
+
+Do not display technical abbreviations such as `g`, `F`, `P`, or `C` without clear localized explanations.
+
+For example, instead of:
+
+F: 27.0g | P: 28.0g | C: 32.0g
+
+Display:
+
+Persian:
+چربی: ۲۷ گرم | پروتئین: ۲۸ گرم | کربوهیدرات: ۳۲ گرم
+
+English:
+Fat: 27 g | Protein: 28 g | Carbohydrates: 32 g
+
+Apply this rule everywhere, including food cards, comparisons, custom food entries, recipes, nutrition reports, and AI-generated content.
+
+## Number formatting
+
+Remove the separate "Use Persian Numerals" setting completely.
+
+Number formatting must automatically follow the selected application language:
+
+- Persian language = Persian digits.
+- English language = English digits.
+
+Use a centralized number-formatting utility to ensure consistency.
+
+## Technical requirements
+
+- Use a centralized localization architecture.
+- Avoid hardcoded UI strings.
+- Do not duplicate localization logic across screens.
+- Ensure changing the language updates the entire application.
+- Persist the selected language locally.
+- Do not require an internet connection to change the language.
+
+# 3. APPEARANCE AND THEME SETTINGS
+
+Remove the entire Liquid Glass concept from the application.
+
+Do not use the terms:
+- Liquid Glass
+- Light Liquid Glass
+- Dark Liquid Glass
+
+Remove all Liquid Glass references from every screen, setting, description, and theme option.
+
+The appearance settings must contain only:
+
+- Light
+- Dark
+- System Default
+
+Persian equivalents:
+
+- روشن
+- تاریک
+- مطابق سیستم
+
+Implement proper light and dark themes.
+
+Maintain the existing Calo Fit visual identity, including its green accent color, clean cards, readable typography, and modern minimalist appearance.
+
+Do not introduce unnecessary visual effects, excessive blur, or expensive animations that reduce performance.
+
+# 4. PERSONAL INFORMATION AND PROFILE SETTINGS
+
+All personal information must be editable from the Settings/Profile section.
+
+The editable fields must include:
+
+1. Name
+2. Age
+3. Gender
+4. Height
+5. Current weight
+6. Target weight
+7. Daily activity level
+
+Use clear labels above or beside every input field.
+
+Never display empty input fields without explaining what information the user should enter.
+
+Examples:
+
+- Name: Enter your name
+- Age: Enter your age in years
+- Gender: Female / Male
+- Height: Enter your height in centimeters
+- Current weight: Enter your current weight in kilograms
+- Target weight: Enter your desired weight in kilograms
+- Activity level: Select your daily activity level
+
+Use appropriate input types and validation.
+
+Activity level options should include:
+
+- Sedentary
+- Lightly active
+- Moderately active
+- Very active
+- Extremely active
+
+Persist all profile information locally.
+
+Changes to personal information must correctly update relevant calculations, including BMI, BMR, TDEE, calorie targets, and macronutrient targets.
+
+Do not overwrite historical weight records when the current weight changes.
+
+## Onboarding correction
+
+On the personal information onboarding screen, replace the incorrect label "Metabolic Profile" with "Gender".
+
+The user should clearly see the gender selection field.
+
+# 5. CALORIE AND NUTRITION CALCULATIONS
+
+Maintain accurate calculations for:
+
+- BMI
+- BMR
+- TDEE
+- Daily calorie targets
+- Protein targets
+- Carbohydrate targets
+- Fat targets
+- Daily water goals
+
+Support three main user goals:
+
+- Weight loss
+- Weight maintenance and health
+- Weight gain and muscle development
+
+Make sure the selected goal affects the recommended calorie target appropriately.
+
+Use established nutrition calculation formulas and validate all inputs.
+
+Avoid arbitrary or misleading nutritional recommendations.
+
+Display all units in the selected language.
+
+# 6. SMART FOOD COMPARISON – FIX ALL BUGS
+
+The Smart Food Comparison section currently has several problems.
+
+Fix all of them.
+
+## Problem 1: Right-side food selection
+
+Currently, the food displayed on the right side does not change correctly.
+
+Fix the selection mechanism.
+
+Both comparison sides must be independently selectable.
+
+When the user selects another food, the corresponding food card and all nutritional values must update immediately.
+
+## Problem 2: Duplicate food entries
+
+Some foods appear twice in the food selection list.
+
+Remove duplicate entries.
+
+Use a reliable unique identifier for each food.
+
+Do not display duplicate foods unless they genuinely represent different products, preparations, serving sizes, or variations.
+
+## Problem 3: Limited food database
+
+Currently, only a limited number of foods are available for comparison.
+
+Remove this limitation.
+
+The comparison database must include:
+
+- All foods already available in the application.
+- All foods added by the user.
+- All custom foods.
+- All relevant food variations and preparations.
+
+The comparison feature must use the same underlying food database as the rest of the application.
+
+Do not create a separate hardcoded list for food comparison.
+
+## Additional requirements
+
+Display these nutritional values for both selected foods:
+
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+
+Display a clear nutritional comparison and a meaningful explanation of the differences.
+
+Do not automatically claim that a lower-calorie food is always healthier.
+
+Allow the user to change either food at any time.
+
+# 7. SMART CHEF – INGREDIENT-BASED RECIPE GENERATION
+
+Improve the Smart Chef section.
+
+## Ingredient selection
+
+The user must be able to:
+
+- Select ingredients already available in the application.
+- Add custom ingredients.
+- Remove selected ingredients.
+- Edit the ingredient list.
+
+## Critical behavior correction
+
+Currently, Smart Chef recommends recipes even when the user has not selected any ingredients.
+
+Fix this.
+
+Rules:
+
+1. If no ingredients are selected, do not generate recipes.
+2. Display a localized message asking the user to select or add ingredients.
+3. Generate recipes using only ingredients explicitly selected by the user.
+4. Do not silently introduce unavailable ingredients.
+5. Optional additions must be clearly identified and must require user approval.
+
+## AI integration
+
+Use an AI service to generate recipes based on the selected ingredients.
+
+Each recipe should include:
+
+- Recipe name
+- Description
+- Ingredients
+- Ingredient quantities
+- Preparation instructions
+- Estimated preparation time
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+
+Calculate nutritional information using available food database information whenever possible.
+
+Do not invent nutritional values without clearly identifying them as estimates.
+
+# 8. AI FOOD IMAGE ANALYSIS
+
+The current AI Food Image Analysis section has a serious functional problem.
+
+Currently, the application automatically analyzes a predefined food such as Zereshk Polo instead of allowing the user to select or capture an actual image.
+
+Completely fix this behavior.
+
+## Image input
+
+Provide two working options:
+
+1. Take a photo using the device camera.
+2. Select an image from the device gallery.
+
+The application must:
+
+- Request camera permission only when needed.
+- Open the actual camera.
+- Allow the user to capture a photo.
+- Allow the user to select an existing image.
+- Display an image preview before analysis.
+- Allow the user to replace or cancel the selected image.
+
+Never automatically analyze a predefined food image.
+
+## AI image analysis
+
+Use a real AI vision model to analyze the selected food image.
+
+The analysis should identify, as accurately as possible:
+
+- Food items
+- Possible ingredients
+- Estimated portion sizes
+- Estimated calories
+- Protein
+- Carbohydrates
+- Fat
+
+Clearly indicate that nutritional values obtained from images are estimates.
+
+Allow the user to edit the identified foods and portion sizes before adding them to the daily food log.
+
+## User communication
+
+Tell the user that image analysis requires an internet connection and access to an available AI vision service.
+
+If the AI service is unavailable, show a clear error message.
+
+Never display fabricated analysis results.
+
+# 9. AI NUTRITION COACH
+
+The Smart Nutrition Coach must become a genuinely functional AI-powered assistant.
+
+Currently, it ignores the user's questions and frequently returns repetitive, unrelated answers.
+
+Fix this completely.
+
+## Real AI connection
+
+Connect the nutrition coach to an actual AI language model.
+
+The coach must:
+
+- Understand the user's exact question.
+- Generate contextually relevant answers.
+- Remember the conversation context during the current conversation.
+- Avoid repeating generic answers.
+- Answer follow-up questions correctly.
+- Use the user's available profile and nutrition information when relevant.
+- Understand Persian and English according to the selected application language.
+
+It should be capable of answering questions about:
+
+- Nutrition
+- Iranian foods
+- Calories
+- Macronutrients
+- Healthy eating
+- Meal planning
+- Weight management
+- Food substitutions
+- Nutrition habits
+
+## Internet requirement
+
+The application must clearly inform users that the Smart Nutrition Coach requires an active internet connection.
+
+If the internet is disconnected, display a localized message asking the user to enable their internet connection.
+
+If internet is available but no AI provider can be reached, explain that the AI service is currently unavailable.
+
+Never return repetitive placeholder responses or pretend that an AI response was successfully generated.
+
+## Health and safety
+
+Do not present the AI coach as a doctor.
+
+It must not diagnose diseases or replace professional medical advice.
+
+For medical conditions, pregnancy, medication interactions, and other high-risk health situations, it should encourage consulting a qualified healthcare professional.
+
+# 10. MULTI-PROVIDER AI FALLBACK SYSTEM
+
+This is a critical requirement because international AI services may be filtered, restricted, blocked, or unavailable in Iran.
+
+Design a flexible AI provider architecture.
+
+## Provider priority
+
+Support multiple configurable AI providers.
+
+Implement a prioritized fallback system:
+
+1. Try the primary configured AI provider.
+2. If it fails due to a network or service availability problem, try the next available provider.
+3. Continue through the configured provider list.
+4. If all providers fail, display a clear message that the AI service cannot currently be connected to.
+
+Provider configuration must be centralized.
+
+Do not hardcode a single AI provider throughout the application.
+
+Do not assume that any particular international AI provider is always accessible.
+
+The system must allow providers to be changed or added without rewriting the application's main features.
+
+## Security requirements
+
+- Never expose API keys in Android source code.
+- Never store secret API keys in client-side configuration files.
+- Use a secure backend API or another appropriate secure credential-management architecture.
+- Keep provider credentials on the server.
+- Use HTTPS.
+- Implement request timeouts.
+- Handle rate limits.
+- Handle authentication failures.
+- Handle provider errors.
+- Avoid infinite retry loops.
+- Use reasonable retry limits.
+- Log technical errors without exposing sensitive user information.
+
+Do not send unnecessary personal information to AI providers.
+
+Only send the minimum information required for the requested operation.
+
+## Performance
+
+- Do not call AI services unnecessarily.
+- Do not block the main UI thread.
+- Use asynchronous network operations.
+- Display loading indicators.
+- Allow users to cancel long-running requests.
+- Avoid duplicate requests.
+- Implement reasonable caching where appropriate.
+
+# 11. INTERNET AND OFFLINE FUNCTIONALITY
+
+The application must distinguish between offline features and internet-dependent features.
+
+## Offline features
+
+The following features should continue working without internet:
+
+- User profile
+- Calorie calculations
+- BMI, BMR, and TDEE calculations
+- Manual food logging
+- Food database browsing using locally stored data
+- Food comparison using locally available foods
+- Weight tracking
+- Progress reports
+- Water tracking
+- Achievement tracking
+- Local reminders
+- Settings
+- Data export
+
+## Internet-dependent features
+
+The following features require internet access and an available AI service:
+
+- AI Nutrition Coach
+- Smart Chef AI recipe generation
+- AI Food Image Analysis
+
+Before starting an internet-dependent operation:
+
+1. Check network availability.
+2. If there is no connection, inform the user that internet access is required.
+3. If the network is available but the AI provider cannot be reached, display an appropriate connection error.
+4. If all AI providers fail, clearly state that the application cannot connect to an AI service at the moment.
+
+Do not crash the application.
+
+Do not freeze the interface.
+
+Do not repeatedly retry requests in the background without user awareness.
+
+The application must remain usable even if all international AI services are inaccessible.
+
+# 12. PROGRESS SECTION – DAILY FOOD HISTORY
+
+Improve the Progress section significantly.
+
+Users must be able to review exactly what they consumed on every day.
+
+Implement a daily nutrition history.
+
+## Daily records
+
+For every recorded day, display:
+
+- Date
+- Total calories consumed
+- Daily calorie target
+- Remaining calories
+- Total protein
+- Total carbohydrates
+- Total fat
+- Total water intake
+- List of consumed foods
+- Food quantities
+- Individual calorie values
+- Individual nutritional values
+
+## Navigation
+
+Allow users to:
+
+- Select a date.
+- Navigate to previous days.
+- Navigate to future dates where appropriate.
+- Review historical meals.
+- See breakfast, lunch, dinner, and snacks separately.
+
+Use the term "Snack" instead of "Afternoon Snack" throughout the entire application.
+
+Persian equivalent: «میان‌وعده».
+
+## Charts and reports
+
+Provide clear visual reports for:
+
+- Daily calorie intake
+- Weekly calorie trends
+- Monthly calorie trends
+- Protein intake
+- Carbohydrate intake
+- Fat intake
+- Weight changes
+- Water consumption
+
+All historical data must remain available unless the user explicitly deletes it.
+
+Do not overwrite previous daily records when new information is entered.
+
+# 13. CONSISTENCY ACHIEVEMENTS – BRONZE, SILVER AND GOLD
+
+Improve the existing Consistency Achievements system.
+
+Implement three achievement levels:
+
+- Bronze
+- Silver
+- Gold
+
+Persian equivalents:
+
+- برنزی
+- نقره‌ای
+- طلایی
+
+## Achievement progression
+
+Users should unlock achievements by maintaining consistent and healthy habits.
+
+Examples:
+
+Bronze:
+- Record the first meal.
+- Complete 3 consecutive days of food tracking.
+- Reach the daily water goal.
+- Record weight for the first time.
+
+Silver:
+- Complete 7 consecutive days of food tracking.
+- Maintain consistent nutrition tracking.
+- Reach personal nutrition goals over multiple days.
+
+Gold:
+- Complete 30 consecutive days of food tracking.
+- Maintain a consistent tracking habit over an extended period.
+- Complete a weekly or monthly nutrition challenge.
+
+## Important rules
+
+- Achievement progress must be calculated from actual user activity.
+- Never award achievements based on fake or predefined data.
+- Persist achievement progress locally.
+- Prevent duplicate achievement rewards.
+- Clearly show locked and unlocked achievements.
+- Display current progress toward the next achievement.
+- Show the user's current streak.
+- Explain how each achievement can be unlocked.
+
+## Streak system
+
+Implement accurate consecutive-day tracking.
+
+A missed day should affect the streak according to the defined rules.
+
+Do not reset the user's entire historical achievement record when a streak ends.
+
+The three achievement levels must have visually distinct but consistent designs.
+
+Use bronze, silver, and gold visual accents while maintaining the Calo Fit design language.
+
+# 14. CUSTOM FOOD ENTRY FORM
+
+Improve the Add Custom Food dialog.
+
+Currently, the form displays empty fields without sufficiently explaining what each field represents.
+
+Add a clear label above or beside every input.
+
+Required fields:
+
+- Food name
+- Calories
+- Protein (grams)
+- Carbohydrates (grams)
+- Fat (grams)
+
+Every field must have:
+
+- A visible label.
+- A meaningful placeholder.
+- Correct input type.
+- Input validation.
+- Appropriate error messages.
+
+Do not use technical abbreviations such as `Carbs (g)` without localization.
+
+Persian examples:
+
+- نام غذا
+- کالری
+- پروتئین (گرم)
+- کربوهیدرات (گرم)
+- چربی (گرم)
+
+English examples:
+
+- Food Name
+- Calories
+- Protein (g)
+- Carbohydrates (g)
+- Fat (g)
+
+Ensure custom foods are saved in the shared food database and become available in:
+
+- Food search
+- Food comparison
+- Daily food logging
+- Progress reports
+- Other relevant food features
+
+# 15. WEIGHT TRACKING LABEL CORRECTION
+
+In the weight tracking section, change the title:
+
+"Current Weight & Goal"
+
+to:
+
+"Current and Target Weight"
+
+Persian:
+
+«وزن فعلی و هدف»
+
+Display the current weight and target weight clearly.
+
+Allow users to record new weight measurements over time.
+
+Preserve previous weight measurements and display historical changes.
+
+# 16. SETTINGS AND NAVIGATION IMPROVEMENTS
+
+## Settings
+
+Keep the settings page clean and organized.
+
+Include:
+
+- Application version: 1.0
+- Appearance: Light / Dark / System Default
+- Language: Persian / English
+- Editable personal information
+- Data backup and export
+- Relevant application information
+
+Remove the separate Persian numeral toggle.
+
+Remove every Liquid Glass reference.
+
+## Bottom navigation and Android system navigation conflict
+
+There is currently a serious layout issue.
+
+The bottom part of the application extends underneath the Android system navigation area.
+
+The application content and bottom navigation bar overlap with:
+
+- Android Back button
+- Android Home button
+- Android Recent Apps button
+
+Fix this across the entire application.
+
+Requirements:
+
+- Respect Android system window insets.
+- Respect navigation bar insets.
+- Respect status bar insets.
+- Use appropriate safe-area padding.
+- Ensure the application's bottom navigation never overlaps the Android navigation bar.
+- Ensure scrollable content can reach its actual bottom.
+- Keep buttons fully visible and clickable.
+- Test on different Android screen sizes and navigation modes.
+
+Do not solve this by simply adding arbitrary large bottom margins.
+
+Use the correct Android window insets and layout mechanisms.
+
+# 17. UI/UX QUALITY
+
+Maintain the Calo Fit brand identity.
+
+Design principles:
+
+- Modern
+- Clean
+- Minimalist
+- Professional
+- Easy to understand
+- Consistent
+- Responsive
+- Accessible
+
+Maintain the existing green brand accent.
+
+Use readable typography and appropriate font sizes.
+
+Avoid unnecessary animations and heavy visual effects.
+
+All cards, buttons, dialogs, and forms must have consistent spacing and alignment.
+
+Ensure Persian RTL layouts are correctly implemented.
+
+Ensure English LTR layouts are correctly implemented.
+
+Prevent text clipping, overlapping elements, and horizontal scrolling where inappropriate.
+
+All interactive controls must work.
+
+Do not create decorative buttons that have no functionality.
+
+# 18. PERFORMANCE AND MEMORY OPTIMIZATION
+
+Performance is a critical priority.
+
+All changes must preserve or improve application speed.
+
+Requirements:
+
+- Avoid unnecessary dependencies.
+- Avoid unnecessary background services.
+- Avoid memory leaks.
+- Avoid excessive recompositions.
+- Avoid expensive database queries.
+- Use efficient database indexing where appropriate.
+- Use pagination for large lists.
+- Use image compression and appropriate image loading strategies.
+- Avoid blocking the main thread.
+- Use asynchronous operations for database and network tasks.
+- Avoid unnecessary API requests.
+- Avoid unnecessary repeated calculations.
+- Reuse existing architecture and working components whenever possible.
+
+Do not introduce large frameworks for small features.
+
+Do not add unnecessary animations, effects, or libraries.
+
+# 19. DATA SECURITY AND PRIVACY
+
+Protect user information.
+
+Requirements:
+
+- Store personal data securely.
+- Validate all user inputs.
+- Use parameterized database operations.
+- Protect API credentials.
+- Use HTTPS for network communication.
+- Avoid exposing personal information in logs.
+- Avoid transmitting unnecessary user information to AI services.
+- Handle permissions safely.
+- Request camera and gallery permissions only when necessary.
+- Do not request unrelated permissions.
+- Prevent accidental deletion of user data.
+- Ensure backups and exports do not expose sensitive information unnecessarily.
+
+The application must not depend on an insecure client-side API key.
+
+# 20. FREE APPLICATION – NO PAID FEATURES
+
+For now, the entire Calo Fit application must be free.
+
+Do not implement:
+
+- Paid subscriptions
+- Premium feature restrictions
+- Paywalls
+- In-app purchases
+- Locked paid functionality
+- Subscription prompts
+
+All application features must be available without payment.
+
+Do not add advertising systems unless explicitly requested later.
+
+# 21. DATABASE AND DATA INTEGRITY
+
+Preserve existing user data.
+
+Before making database schema changes:
+
+- Inspect the existing database.
+- Identify existing tables and relationships.
+- Create appropriate migration scripts.
+- Preserve existing records.
+- Avoid destructive migrations.
+- Provide safe default values where necessary.
+- Test migration from the current application version.
+
+Do not recreate the database from scratch.
+
+Do not replace real user data with sample data.
+
+Ensure that food records, custom foods, daily logs, weight records, achievements, and user settings remain consistent.
+
+# 22. TESTING AND VALIDATION
+
+After implementation, thoroughly test the entire application.
+
+At minimum, verify:
+
+1. First-launch language selection.
+2. Complete Persian localization.
+3. Complete English localization.
+4. Automatic number formatting.
+5. Light and dark themes.
+6. Editable personal information.
+7. Correct calorie and macronutrient calculations.
+8. Food comparison on both sides.
+9. No duplicate food entries.
+10. Comparison of custom foods.
+11. Smart Chef ingredient selection.
+12. Custom ingredient entry.
+13. Camera image capture.
+14. Gallery image selection.
+15. Real AI image analysis.
+16. Context-aware AI Nutrition Coach.
+17. AI provider fallback behavior.
+18. Offline application functionality.
+19. Internet connection error handling.
+20. Daily nutrition history.
+21. Weekly and monthly progress reports.
+22. Bronze, silver, and gold achievements.
+23. Custom food form validation.
+24. Correct use of the term Snack.
+25. Correct weight tracking labels.
+26. Android navigation bar and system inset behavior.
+27. Data persistence after restarting the application.
+28. Database migration safety.
+29. Performance and memory usage.
+30. Application behavior when all AI services are unavailable.
+
+Do not claim a feature works unless it has actually been implemented and tested.
+
+# 23. IMPLEMENTATION RULES – VERY IMPORTANT
+
+Before making any changes:
+
+1. Inspect the existing project structure.
+2. Identify the current programming language and frameworks.
+3. Inspect the database and existing data models.
+4. Identify the current navigation system.
+5. Inspect the current AI integration, if any.
+6. Identify existing bugs and their root causes.
+
+Then implement the changes incrementally.
+
+IMPORTANT:
+
+- Do not rewrite the entire application unnecessarily.
+- Do not delete existing working features.
+- Do not replace functional features with static mockups.
+- Do not use hardcoded food comparison data.
+- Do not use predefined fake AI responses.
+- Do not automatically generate fake food image analysis.
+- Do not pretend that an AI service is connected when it is not.
+- Do not expose API keys.
+- Do not introduce dependencies on services that are guaranteed to be inaccessible in Iran.
+- Do not make the application dependent on internet access for offline features.
+- Do not introduce unnecessary complexity that makes the application slower.
+- Do not sacrifice security for convenience.
+
+If an external AI provider requires configuration, implement the integration architecture properly and clearly identify the required server-side configuration. Never silently substitute a fake implementation.
+
+If an existing project limitation prevents a feature from being fully implemented, explain the limitation instead of pretending it is complete.
+
+# 24. FINAL DELIVERY REQUIREMENTS
+
+After completing the modifications:
+
+- Ensure the project builds successfully.
+- Fix all compilation errors.
+- Fix all runtime crashes.
+- Verify database migrations.
+- Verify the existing user data is preserved.
+- Test the main application workflows.
+- Ensure the application is ready for Android installation.
+- Maintain a clean and organized codebase.
+
+Provide a concise implementation report containing:
+
+1. Features successfully implemented.
+2. Bugs fixed.
+3. Database changes and migrations.
+4. AI providers configured and their fallback order.
+5. Features requiring server-side configuration.
+6. Features that require internet access.
+7. Tests performed and their results.
+8. Any remaining limitations.
+
+**Final objective:**
+
+Deliver a reliable, fast, secure, fully localized, entirely free Calo Fit application with functional AI features, intelligent nutrition tracking, personalized progress monitoring, and a smooth user experience.
+
+The application must remain useful even in Iran when international AI services are unavailable or the internet is disconnected.
+
+Prioritize stability, data integrity, security, performance, and real functionality over unnecessary visual complexity.

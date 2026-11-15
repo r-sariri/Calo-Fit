@@ -1,0 +1,1321 @@
+# CALOFIT – COMPLETE ANDROID APP DEVELOPMENT, IMPROVEMENT AND BUG FIX SPECIFICATION
+
+## 1. PROJECT OVERVIEW
+
+You are a senior Android engineer, Kotlin developer, UI/UX designer, software architect, database engineer, AI integration specialist, and application security expert.
+
+Your task is to continue developing and improving my existing Android calorie-tracking application called **CaloFit (کالوفیت)**.
+
+The application must be a real, fully functional, installable Android application, not merely a visual prototype or a collection of static screens.
+
+**Current application version: 1.0**
+
+The primary objectives are:
+
+- Excellent performance and responsiveness.
+- Reliable offline functionality.
+- Secure AI integrations.
+- Accurate calorie and nutritional calculations.
+- High-quality Persian and English localization.
+- A clean, modern, attractive user interface.
+- Compatibility with users in Iran, including unreliable internet connections, filtering, and service restrictions.
+- No unnecessary complexity or resource consumption.
+- All application features must currently be completely free.
+
+IMPORTANT: Before modifying anything, inspect the existing project, source code, architecture, database, navigation, dependencies, and current implementations.
+
+Do not unnecessarily rebuild working features from scratch.
+
+Preserve existing working functionality and improve only what is necessary.
+
+---
+
+# 2. TECHNOLOGY AND ARCHITECTURE
+
+Use native Android development.
+
+Preferred technologies:
+
+- Kotlin
+- Jetpack Compose
+- Material 3
+- MVVM architecture
+- Clean Architecture principles
+- Room Database
+- DataStore Preferences
+- Kotlin Coroutines and Flow
+- Hilt for dependency injection
+- Retrofit or an appropriate lightweight networking client
+- WorkManager only when background scheduling is genuinely necessary
+- CameraX or Android's appropriate camera integration
+- Android Photo Picker for gallery selection
+
+Architecture requirements:
+
+1. Separate UI, business logic, database, and network layers.
+2. Use repositories for data access.
+3. Keep AI providers behind independent interfaces.
+4. Avoid unnecessary dependencies and large libraries.
+5. Avoid blocking the main thread.
+6. Use asynchronous operations for database and network tasks.
+7. Use pagination or lazy lists for large food databases.
+8. Avoid unnecessary recomposition in Jetpack Compose.
+9. Handle application lifecycle correctly.
+10. Do not introduce memory leaks.
+11. Keep the APK reasonably small.
+12. Use stable, compatible library versions.
+13. Do not introduce unnecessary background services.
+
+The application must remain usable without requiring a personal backend server or user account.
+
+All ordinary calculations and core functionality must work locally.
+
+---
+
+# 3. APPLICATION VERSION
+
+Set the application version to:
+
+- Version name: 1.0
+- Version code: 1
+
+Display version 1.0 in the appropriate application information section.
+
+Do not change the version automatically during development unless explicitly requested.
+
+---
+
+# 4. DESIGN SYSTEM AND USER INTERFACE
+
+Maintain the existing CaloFit visual identity.
+
+Design characteristics:
+
+- Modern and minimal.
+- Soft, clean backgrounds.
+- Rounded cards.
+- Comfortable spacing.
+- Clear typography.
+- Smooth but lightweight animations.
+- Consistent iconography.
+- Excellent readability.
+- Responsive layouts for different Android screen sizes.
+
+Preferred colors:
+
+- Primary green: #A6ED36
+- Secondary green: #C4F46D
+- Dark green: #285500
+- Pastel purple: #8975D5
+- Blue: #729BE5
+- Light background: #F7F7FC
+
+Support:
+
+- Light mode.
+- Dark mode.
+- Follow system theme.
+
+Do not use the term "Liquid Glass" anywhere in the application.
+
+Avoid excessive shadows, complicated visual effects, unnecessary animations, and heavy graphical elements.
+
+All buttons must have meaningful functionality.
+
+All input fields must have visible labels above or beside them.
+
+Never rely exclusively on placeholder text to explain what a field is for.
+
+For example:
+
+Field label: Protein (g)
+
+Input: [ Enter protein amount ]
+
+Field label: Calories (kcal)
+
+Input: [ Enter calories ]
+
+The user must immediately understand what information each field requires.
+
+---
+
+# 5. LANGUAGE SELECTION AND LOCALIZATION
+
+On the first application launch, show a language selection screen.
+
+Display exactly two language buttons:
+
+فارسی | Persian
+
+English | انگلیسی
+
+Do not add explanatory descriptions beneath these buttons.
+
+The selected language must automatically determine the entire application language.
+
+Persian mode:
+
+- Right-to-left layout.
+- Persian interface text.
+- Persian nutritional terminology.
+- Persian digit formatting.
+- Appropriate Persian date presentation.
+- Correct Persian typography.
+
+English mode:
+
+- Left-to-right layout.
+- English interface text.
+- English nutritional terminology.
+- English digit formatting.
+- Gregorian date presentation.
+
+Automatically select the appropriate digit system according to the chosen language.
+
+Remove the separate "Use Persian Numbers" setting entirely.
+
+Do not mix Persian and English labels, units, digits, or interface text.
+
+Examples:
+
+Persian:
+- کالری
+- پروتئین
+- کربوهیدرات
+- چربی
+- گرم
+- کیلوگرم
+- میلی‌لیتر
+
+English:
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+- Grams
+- Kilograms
+- Milliliters
+
+Language changes must update the entire interface without requiring application reinstallation.
+
+Store the selected language locally.
+
+---
+
+# 6. FIRST-TIME USER ONBOARDING
+
+Create a short, intuitive onboarding process.
+
+Collect the following information:
+
+1. Name.
+2. Age.
+3. Gender.
+4. Height.
+5. Current weight.
+6. Target weight.
+7. Daily activity level.
+8. Weight goal.
+
+For gender selection, use:
+
+- Female
+- Male
+
+IMPORTANT:
+
+On the gender selection screen, write "Gender".
+
+Do not write "Metabolic Profile".
+
+All profile fields must have visible labels and clear input instructions.
+
+The onboarding process should be simple and should not ask unnecessary questions.
+
+Provide an option to edit all information later.
+
+---
+
+# 7. PERSONAL PROFILE AND SETTINGS
+
+All personal information must be editable in Settings.
+
+The user must be able to change:
+
+- Name.
+- Age.
+- Gender.
+- Height.
+- Current weight.
+- Target weight.
+- Daily activity level.
+- Weight management goal.
+
+Activity levels:
+
+- Sedentary.
+- Lightly active.
+- Moderately active.
+- Very active.
+- Extremely active.
+
+When profile information changes, recalculate relevant nutritional targets.
+
+Do not erase existing food logs or historical progress when updating profile information.
+
+The user must be able to correct previously entered information.
+
+---
+
+# 8. CALORIE AND NUTRITION CALCULATIONS
+
+Implement accurate nutritional calculations.
+
+Calculate:
+
+- BMI.
+- BMR.
+- TDEE.
+- Daily calorie target.
+- Protein target.
+- Carbohydrate target.
+- Fat target.
+- Daily water target.
+
+Use established formulas such as Mifflin-St Jeor for BMR.
+
+Use the user's age, gender, height, weight, and activity level.
+
+Provide three primary goals:
+
+1. Weight Loss.
+2. Weight Maintenance and Health.
+3. Weight Gain and Muscle Building.
+
+When the user selects a goal, dynamically update the recommended calorie and macronutrient targets.
+
+Make all units and calculations consistent.
+
+Important:
+
+- Prevent negative or impossible values.
+- Validate user inputs.
+- Prevent division by zero.
+- Avoid unsafe calorie recommendations.
+- Do not present estimates as medically exact values.
+- Do not encourage extreme dieting.
+
+Allow the user to view and modify reasonable nutritional targets.
+
+---
+
+# 9. FOOD DATABASE AND FOOD LOGGING
+
+Create a comprehensive food database.
+
+Include:
+
+- Common Iranian foods.
+- Traditional Iranian meals.
+- Fruits.
+- Vegetables.
+- Grains.
+- Dairy products.
+- Meat.
+- Fish.
+- Eggs.
+- Nuts.
+- Legumes.
+- Snacks.
+- Beverages.
+- Packaged foods.
+
+Each food should contain, where available:
+
+- Food name.
+- Calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Fiber.
+- Sugar.
+- Serving size.
+- Weight in grams.
+
+Allow users to:
+
+- Search for foods.
+- Add foods to their daily log.
+- Specify food quantities.
+- Edit quantities.
+- Remove food entries.
+- Create custom foods.
+- Edit custom foods.
+- Save frequently used foods.
+
+Custom food creation must include clearly labeled input fields.
+
+For example:
+
+- Food name.
+- Serving weight (g).
+- Calories (kcal).
+- Protein (g).
+- Carbohydrates (g).
+- Fat (g).
+
+All food entries must be stored locally.
+
+Avoid duplicate food entries in search results and comparison lists.
+
+Use stable food IDs and proper database uniqueness rules.
+
+Do not create duplicate records when importing or updating foods.
+
+---
+
+# 10. MEAL CATEGORIES
+
+Use these meal categories:
+
+- Breakfast.
+- Lunch.
+- Dinner.
+- Snack.
+
+IMPORTANT:
+
+Replace every occurrence of the Persian term "عصرانه" with "میان‌وعده".
+
+The application must consistently use "میان‌وعده" throughout the Persian interface.
+
+---
+
+# 11. SMART FOOD COMPARISON
+
+This feature requires particular attention.
+
+Users must be able to compare any two foods.
+
+Available foods must include:
+
+1. All built-in foods.
+2. All foods added by the user.
+3. All previously saved custom foods.
+
+Do not restrict comparisons to a small predefined selection.
+
+## Critical bug fixes
+
+### Bug 1: The right-hand food cannot be changed.
+
+Fix the selection mechanism.
+
+The user must be able to independently select and change both foods.
+
+Both comparison selectors must work correctly.
+
+### Bug 2: Duplicate foods appear in the selection list.
+
+Remove duplicate entries.
+
+Each food must appear only once unless it genuinely represents a different serving or product.
+
+### Bug 3: Incorrect green highlighting.
+
+Currently, the right-hand food is always displayed in green, even when the left-hand food is healthier or contains fewer calories.
+
+This is incorrect.
+
+Implement a dynamic comparison algorithm.
+
+The green highlight must be determined by the actual nutritional comparison, not the position of the food on the screen.
+
+Compare:
+
+- Calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Fiber.
+- Sugar.
+- Sodium, when available.
+- Serving size.
+
+Use comparable serving quantities.
+
+Normalize nutritional values per 100 grams when necessary, while also allowing comparison using the selected serving sizes.
+
+Calculate a transparent nutritional quality score using available nutritional data.
+
+A healthier option should receive the green recommendation only when the nutritional evidence supports it.
+
+Display separate indicators for:
+
+- Lower calories.
+- Higher protein.
+- Higher fiber.
+- Lower sugar.
+- Overall healthier choice.
+
+IMPORTANT:
+
+If one food has fewer calories but the other has a better nutritional profile, do not misleadingly label one as universally healthier.
+
+Show the separate advantages of both foods.
+
+If one food is both lower in calories and nutritionally better, highlight that food in green.
+
+The green highlight must work correctly regardless of whether the winning food is on the left or right.
+
+Never hardcode the right-hand side as the winner.
+
+The comparison must update immediately whenever either food changes.
+
+---
+
+# 12. SMART CHEF – AI RECIPE GENERATOR
+
+Create an intelligent recipe recommendation system.
+
+The user must select available ingredients.
+
+Display ingredients as selectable chips.
+
+Allow users to add custom ingredients.
+
+Only generate recipes using ingredients actually selected by the user.
+
+IMPORTANT BUG FIX:
+
+Currently, the application suggests recipes even when no ingredients have been selected.
+
+This must be fixed.
+
+When no ingredients are selected:
+
+- Do not generate a recipe.
+- Do not display random suggestions.
+- Display a helpful message asking the user to select ingredients.
+
+When the user selects ingredients, send the selected ingredient list to the AI model.
+
+The AI must generate recipes based on those ingredients.
+
+Allow optional additional filters:
+
+- Cooking time.
+- Meal type.
+- Dietary preference.
+- Available cooking equipment.
+
+For every recipe, display:
+
+- Recipe name.
+- Ingredients.
+- Ingredient quantities.
+- Preparation instructions.
+- Estimated cooking time.
+- Calories per serving.
+- Protein.
+- Carbohydrates.
+- Fat.
+
+Clearly distinguish estimated nutritional values from verified database values.
+
+Allow users to save recipes locally.
+
+Do not generate unrelated recipes or invent ingredients that the user does not have.
+
+If additional ingredients are essential, clearly identify them as optional rather than pretending the user selected them.
+
+---
+
+# 13. AI FOOD IMAGE ANALYSIS
+
+Implement real AI-powered food image analysis.
+
+Users must be able to:
+
+1. Take a photograph using the phone camera.
+2. Select an existing photograph from the gallery.
+3. Preview the selected image.
+4. Confirm or cancel the analysis.
+5. Send the actual selected image to the AI model.
+
+Use proper Android camera and photo-picker permissions.
+
+IMPORTANT BUG FIXES:
+
+Currently:
+
+- Camera selection does not work correctly.
+- Gallery selection does not work correctly.
+- Pressing the analysis button automatically analyzes Zereshk Polo.
+- The application does not analyze the actual selected image.
+
+Remove all hardcoded food-analysis results.
+
+Never automatically analyze a predefined food.
+
+The analysis must use the actual image selected by the user.
+
+The AI should identify:
+
+- Food name.
+- Possible ingredients.
+- Estimated serving size.
+- Estimated weight.
+- Estimated calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Fiber, when reasonably identifiable.
+
+Show the analysis results before saving them.
+
+Allow the user to edit the food name, serving size, and nutritional estimates.
+
+Only save the result after user confirmation.
+
+Use image compression and appropriate image resizing before uploading to reduce data usage and processing time.
+
+Do not upload unnecessarily large original images.
+
+Inform the user that this feature requires an internet connection.
+
+If the AI service is unavailable, display a clear error instead of generating fake results.
+
+---
+
+# 14. AI NUTRITION COACH
+
+Implement a genuinely intelligent, context-aware nutrition assistant.
+
+This feature must use a real AI model.
+
+It must not be a static collection of predefined responses.
+
+IMPORTANT BUG FIX:
+
+Currently, the nutrition coach frequently ignores the user's actual question and repeats the same generic answer.
+
+Fix this completely.
+
+The coach must:
+
+- Understand the actual question.
+- Respond directly to the question.
+- Maintain relevant conversation context.
+- Avoid repeating identical answers.
+- Understand Persian and English.
+- Answer questions about Iranian foods.
+- Explain calories and macronutrients.
+- Suggest practical meal improvements.
+- Explain healthy eating principles.
+- Use the user's profile and nutritional goals when relevant.
+- Reference the user's food log when appropriate.
+
+Use the conversation history as context, but limit its size to prevent unnecessary token consumption and network costs.
+
+Do not send unrelated personal information to the AI provider.
+
+Include appropriate health and nutrition safety instructions.
+
+The coach must not diagnose diseases, prescribe medication, or replace a qualified medical professional.
+
+Display a clear message when the internet is unavailable:
+
+"برای استفاده از مربی هوشمند، لطفاً اتصال اینترنت خود را روشن کنید."
+
+In English:
+
+"Please connect to the internet to use the AI Nutrition Coach."
+
+If no AI provider is available, show an understandable connection error.
+
+Never simulate an AI response using unrelated predefined text.
+
+---
+
+# 15. MULTI-PROVIDER AI ARCHITECTURE AND IRAN COMPATIBILITY
+
+This is one of the most important technical requirements.
+
+AI services may be filtered, restricted, unavailable, or blocked in Iran.
+
+The application must use a flexible AI provider architecture.
+
+Create a common AI provider interface.
+
+For example:
+
+- AIProvider
+- GeminiProvider
+- AlternativeAIProvider
+- AIProviderManager
+
+The provider manager must support configurable provider priorities.
+
+Example priority:
+
+1. Primary AI provider.
+2. Secondary AI provider.
+3. Third available provider.
+
+When a provider is unavailable because of:
+
+- Network failure.
+- Timeout.
+- Service outage.
+- Rate limit.
+- Regional restriction.
+- Authentication failure.
+
+The manager should attempt the next eligible provider when appropriate.
+
+Use reasonable connection and read timeouts.
+
+Avoid endless retry loops.
+
+Use exponential backoff with limited retry attempts.
+
+Do not repeatedly retry requests when the device has no internet connection.
+
+Do not block the UI while trying different providers.
+
+Display the actual connection status to the user.
+
+## Critical security requirements
+
+NEVER:
+
+- Hardcode API keys in Kotlin source files.
+- Embed secret API keys in the APK.
+- Expose provider credentials in logs.
+- Store API secrets in DataStore or SharedPreferences.
+- Disable TLS certificate validation.
+- Accept arbitrary certificates.
+- Use insecure HTTP connections.
+- Disable authentication or App Check just to make an AI request work.
+
+Prefer official, supported secure integrations.
+
+For Gemini, use an appropriate secure integration such as Firebase AI Logic with properly configured authentication and App Check where applicable.
+
+For other providers, only enable integrations that can be implemented without exposing secrets.
+
+Since this application must not require a personal backend server, do not introduce a custom backend merely to make the integration appear functional.
+
+If a particular provider requires a secure backend to protect its API credentials, do not embed its secret in the application as a workaround.
+
+Keep that provider disabled until a secure integration is configured.
+
+Never claim that a provider is available until a real connection has been verified.
+
+## Fix the current AI security error
+
+The application currently displays:
+
+"AI service security settings could not be verified. If you are using a proxy server, check your server configuration."
+
+Investigate and fix the actual cause.
+
+Inspect:
+
+- Firebase project configuration, if Firebase AI Logic is used.
+- Correct project and application configuration.
+- Package name and signing configuration.
+- Required API enablement.
+- Firebase AI Logic initialization.
+- Authentication configuration.
+- App Check configuration.
+- Provider endpoint configuration.
+- Network security configuration.
+- TLS configuration.
+- Request authorization.
+- Any proxy or gateway configuration currently present.
+
+Do not simply hide the error message.
+
+Do not bypass security verification.
+
+Do not weaken application security rules.
+
+If the error originates from an incorrectly configured service, correct the actual configuration and clearly identify any external setup that still requires the developer's action.
+
+## Internet connectivity handling
+
+Before an AI request:
+
+1. Check network connectivity.
+2. Verify that internet access is actually available.
+3. Attempt the selected provider.
+4. If unavailable, try the next securely configured provider.
+5. If all providers fail, show a clear message.
+
+If the internet is disconnected, display:
+
+"اتصال اینترنت برقرار نیست. لطفاً اینترنت خود را روشن کنید."
+
+If no AI provider can be reached, display:
+
+"در حال حاضر اتصال به سرویس هوش مصنوعی امکان‌پذیر نیست. لطفاً بعداً دوباره تلاش کنید."
+
+In English, provide equivalent messages.
+
+Do not crash the application.
+
+Do not freeze the interface.
+
+Do not lose user-entered information.
+
+All non-AI functionality must continue working normally.
+
+---
+
+# 16. PROGRESS AND DAILY NUTRITION HISTORY
+
+Implement a complete Progress section.
+
+Users must be able to review their daily nutrition history.
+
+For every date, display:
+
+- Foods consumed.
+- Meal categories.
+- Food quantities.
+- Calories per food.
+- Total daily calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Water consumption.
+- Daily nutritional target.
+- Remaining calories.
+
+Organize foods by:
+
+- Breakfast.
+- Lunch.
+- Dinner.
+- Snacks.
+
+Provide a calendar or date selector.
+
+Allow users to select previous dates and review their complete daily food records.
+
+Include useful charts for:
+
+- Daily calorie intake.
+- Weekly calorie trends.
+- Weight changes.
+- Protein intake.
+- Carbohydrate intake.
+- Fat intake.
+- Water consumption.
+
+Allow users to compare their daily intake with their calculated nutritional goals.
+
+Do not replace historical records when a new day begins.
+
+Store all history locally in Room Database.
+
+Historical data must remain available when the user changes their profile.
+
+Avoid unnecessary database queries and expensive chart calculations.
+
+---
+
+# 17. STREAKS AND ACHIEVEMENTS
+
+Implement the Achievements and Consistency system.
+
+There must be exactly three achievement levels:
+
+1. Bronze.
+2. Silver.
+3. Gold.
+
+Use these levels for progression and achievement rewards.
+
+Suggested achievement categories:
+
+- First food entry.
+- Daily food logging.
+- Water consumption.
+- Consistent nutrition tracking.
+- Weekly tracking.
+- Macronutrient balance.
+- Progress milestones.
+
+Example progression:
+
+Bronze:
+- Complete the first meaningful tracking milestone.
+
+Silver:
+- Maintain a longer period of consistent tracking.
+
+Gold:
+- Complete a substantial consistency milestone.
+
+Use clear, measurable criteria for every achievement.
+
+The progress screen should display:
+
+- Current streak.
+- Consecutive tracking days.
+- Days remaining to the next milestone.
+- Completed achievements.
+- Locked achievements.
+- Bronze, Silver, and Gold progression.
+
+The system must use actual recorded user activity.
+
+Do not award achievements simply because the user opened the application.
+
+Do not reset a streak incorrectly due to timezone changes or application restarts.
+
+A missed day must be handled consistently.
+
+Avoid rewarding unsafe behavior such as excessively low calorie intake.
+
+Store achievement progress locally.
+
+---
+
+# 18. SETTINGS AND BACKUP
+
+Provide a clean Settings screen.
+
+Include:
+
+- Application version.
+- Language selection.
+- Appearance settings.
+- Editable personal information.
+- Data backup.
+- Data restoration.
+- Privacy information.
+
+Remove the separate Persian-number toggle.
+
+Number formatting must automatically follow the selected language.
+
+Provide JSON export for:
+
+- User profile.
+- Food database additions.
+- Food logs.
+- Weight history.
+- Water history.
+- Saved recipes.
+- Achievement progress.
+
+Implement reliable JSON import and validation.
+
+Do not overwrite existing data without appropriate user confirmation.
+
+Validate imported data to prevent corrupted or malicious input.
+
+---
+
+# 19. NAVIGATION AND ANDROID SYSTEM BARS
+
+IMPORTANT UI BUG FIX:
+
+Currently, the bottom application navigation bar overlaps with Android system navigation controls.
+
+Some application content and navigation buttons are positioned underneath:
+
+- Android Back navigation.
+- Home navigation.
+- Recent Apps navigation.
+
+Fix this issue throughout the application.
+
+Use correct Android WindowInsets handling.
+
+Respect:
+
+- System navigation bar insets.
+- Status bar insets.
+- Display cutouts.
+- Gesture navigation.
+- Three-button navigation.
+
+Use appropriate Compose APIs such as safeDrawingPadding, navigationBarsPadding, and windowInsetsPadding where needed.
+
+Ensure the application's bottom navigation bar is always positioned above the Android system navigation area.
+
+The bottom navigation must never overlap with the system Back, Home, or Recent Apps controls.
+
+Test on devices using both gesture navigation and three-button navigation.
+
+Do not solve this by adding arbitrary fixed bottom margins.
+
+---
+
+# 20. WEIGHT TRACKING SCREEN
+
+Fix the title shown in the weight tracking interface.
+
+Currently, the title is:
+
+"وزن فعلی & هدف"
+
+Replace it with exactly:
+
+"وزن فعلی و هدف"
+
+The screen must display:
+
+- Height.
+- Current weight.
+- Target weight.
+
+Allow users to update their current weight over time.
+
+Keep the weight history.
+
+Display progress toward the target weight.
+
+Use appropriate units and language-specific formatting.
+
+Do not confuse the current weight with the target weight.
+
+All calculations and progress indicators must update correctly when the user changes their weight.
+
+---
+
+# 21. PERFORMANCE OPTIMIZATION
+
+Performance is a critical requirement.
+
+The application must remain lightweight and responsive.
+
+Implement:
+
+- Efficient Room queries.
+- LazyColumn and LazyRow for long lists.
+- Image compression.
+- Asynchronous database operations.
+- Efficient Compose state management.
+- Appropriate caching.
+- Limited network requests.
+- Request cancellation when appropriate.
+- Efficient JSON parsing.
+- Minimal background processing.
+
+Avoid:
+
+- Unnecessary polling.
+- Excessive network requests.
+- Unnecessary animations.
+- Loading the entire food database into memory.
+- Repeated database initialization.
+- Unnecessary AI requests.
+- Large image uploads.
+- Infinite retry loops.
+- Blocking the main thread.
+- Recreating screens unnecessarily.
+
+The application must start quickly and respond smoothly to user interactions.
+
+AI operations must never slow down ordinary calorie tracking.
+
+---
+
+# 22. OFFLINE-FIRST FUNCTIONALITY
+
+The application must be designed as an offline-first application.
+
+The following features must work without internet:
+
+- Application startup.
+- User profile.
+- Calorie calculations.
+- BMR and TDEE calculations.
+- Food database.
+- Food search.
+- Food logging.
+- Custom food creation.
+- Daily progress history.
+- Weight tracking.
+- Water tracking.
+- Achievements.
+- Settings.
+- JSON export and import.
+
+Only genuinely AI-dependent functionality should require internet.
+
+These features include:
+
+- AI Nutrition Coach.
+- AI Food Image Analysis.
+- AI Smart Chef.
+
+When the internet is unavailable:
+
+- Do not crash.
+- Do not show misleading results.
+- Do not lose user data.
+- Do not repeatedly attempt network requests.
+- Clearly explain that an internet connection is required for AI features.
+
+Automatically return to normal operation when connectivity becomes available.
+
+---
+
+# 23. PRIVACY AND DATA SECURITY
+
+User privacy is extremely important.
+
+Store personal data locally by default.
+
+Do not require registration or account creation.
+
+Do not transmit personal data unless required for a feature explicitly requested by the user.
+
+For AI requests, transmit only the minimum necessary information.
+
+Do not send unnecessary personal profile information.
+
+Implement secure network communication.
+
+Validate all external responses.
+
+Handle malformed AI responses safely.
+
+Use appropriate Android storage security.
+
+Do not expose sensitive information in application logs.
+
+Do not store API secrets inside the APK.
+
+Protect backup and restore operations against invalid or malicious JSON data.
+
+Request camera and photo permissions only when necessary.
+
+Do not request unrelated Android permissions.
+
+---
+
+# 24. FREE APPLICATION POLICY
+
+For the current version:
+
+ALL FEATURES MUST BE FREE.
+
+Do not implement:
+
+- Paid subscriptions.
+- Premium plans.
+- Paywalls.
+- Locked features requiring payment.
+- In-app purchases.
+- Artificial usage restrictions designed to force payment.
+
+All application functionality must be available to the user.
+
+However, do not pretend that third-party AI services have unlimited free usage.
+
+If an external service has a free usage quota, handle its actual limitations transparently without introducing a payment system into CaloFit.
+
+---
+
+# 25. ERROR HANDLING AND RELIABILITY
+
+Every network-dependent operation must have proper error handling.
+
+Handle:
+
+- No internet.
+- DNS failures.
+- Timeouts.
+- HTTP errors.
+- Authentication errors.
+- Provider restrictions.
+- AI service outages.
+- Invalid JSON.
+- Empty responses.
+- Camera permission denial.
+- Gallery access failure.
+- Database errors.
+
+Show clear, user-friendly messages.
+
+Do not display raw stack traces or technical secrets to users.
+
+Do not crash when an AI service fails.
+
+Do not silently replace real AI functionality with hardcoded sample data.
+
+---
+
+# 26. TESTING REQUIREMENTS
+
+Before considering the work complete, test the actual application.
+
+## Food comparison tests
+
+Test both possible outcomes:
+
+- Left food is healthier and has fewer calories.
+- Right food is healthier and has fewer calories.
+
+Verify that the green highlight follows the actual nutritional comparison.
+
+Also test conflicting cases where one food has fewer calories but the other has a better nutritional profile.
+
+Verify that custom foods appear in the comparison list.
+
+Verify that duplicate foods do not appear.
+
+## Smart Chef tests
+
+- No ingredients selected.
+- One ingredient selected.
+- Multiple ingredients selected.
+- Custom ingredient added.
+- AI unavailable.
+- Internet disconnected.
+
+## Food image analysis tests
+
+- Take a new photograph.
+- Select an existing gallery photograph.
+- Cancel image selection.
+- Deny camera permission.
+- Analyze a real selected image.
+- Verify that no predefined food is automatically analyzed.
+
+## AI Nutrition Coach tests
+
+- Ask different questions.
+- Ask follow-up questions.
+- Test Persian.
+- Test English.
+- Test no internet.
+- Test unavailable providers.
+- Verify that answers are relevant and not repetitive.
+
+## Profile tests
+
+- Change gender.
+- Change age.
+- Change height.
+- Change current weight.
+- Change target weight.
+- Change activity level.
+- Verify that relevant nutritional targets update correctly.
+
+## Navigation tests
+
+Test:
+
+- Gesture navigation.
+- Three-button navigation.
+- Different screen sizes.
+- Light mode.
+- Dark mode.
+- Persian RTL.
+- English LTR.
+
+## Offline tests
+
+Turn off the internet and verify that all local features remain fully operational.
+
+## Security tests
+
+Verify that:
+
+- No API keys are embedded in the APK.
+- No insecure HTTP connections are used.
+- No TLS verification is bypassed.
+- No sensitive credentials appear in logs.
+- Invalid AI responses do not crash the application.
+
+---
+
+# 27. DEVELOPMENT EXECUTION INSTRUCTIONS
+
+Work directly on the existing project.
+
+Do not merely describe how to implement these features.
+
+Actually inspect, modify, implement, and test the source code.
+
+Follow this order:
+
+1. Inspect the existing project and identify current bugs.
+2. Review the application architecture.
+3. Fix critical application errors.
+4. Fix the AI security configuration and integration.
+5. Fix food comparison logic.
+6. Fix camera and gallery integration.
+7. Fix Smart Chef ingredient selection.
+8. Fix AI Nutrition Coach responses.
+9. Implement the AI provider manager.
+10. Implement progress history.
+11. Implement the achievement system.
+12. Fix profile settings and labels.
+13. Fix Persian and English localization.
+14. Fix Android system navigation overlap.
+15. Optimize performance.
+16. Test the entire application.
+
+Do not remove existing working functionality.
+
+Do not replace actual functionality with static mockups.
+
+Do not claim a feature is complete if it has not been implemented and tested.
+
+If an external service requires configuration outside the source code, clearly identify the exact remaining configuration steps.
+
+If a requested integration cannot be implemented securely without an external dependency, explain the limitation rather than using an insecure workaround.
+
+---
+
+# 28. FINAL ACCEPTANCE CRITERIA
+
+The project is considered complete only when:
+
+- The application builds successfully.
+- The application installs on a real Android device.
+- Version 1.0 is configured.
+- Persian and English work correctly.
+- Digit formatting follows the selected language automatically.
+- All personal information is editable.
+- Calorie calculations work correctly.
+- Food logging works offline.
+- All built-in and custom foods can be compared.
+- The correct food receives the green comparison highlight.
+- Duplicate comparison entries are removed.
+- Smart Chef uses only selected ingredients.
+- Camera and gallery selection work correctly.
+- AI food analysis processes the actual selected image.
+- The nutrition coach answers relevant questions.
+- AI provider fallback works only through securely configured providers.
+- The current AI security error is properly diagnosed and resolved.
+- Daily nutrition history works.
+- Bronze, Silver, and Gold achievements work.
+- The weight screen title reads "وزن فعلی و هدف".
+- The term "میان‌وعده" is used consistently.
+- Android system navigation does not overlap the application.
+- All non-AI features work offline.
+- All features are free.
+- No API secrets are exposed.
+- The application remains fast, stable, and secure.
+
+**MOST IMPORTANT FINAL INSTRUCTION:**
+
+Prioritize correctness, security, stability, performance, and real functionality over adding unnecessary features or visual complexity.
+
+Do not sacrifice the application's existing functionality to implement new features.
+
+Do not introduce a heavy architecture, unnecessary dependencies, insecure AI integrations, or external services that make the application unreliable in Iran.
+
+Deliver a fully functional, optimized, secure, and installable CaloFit Android application.

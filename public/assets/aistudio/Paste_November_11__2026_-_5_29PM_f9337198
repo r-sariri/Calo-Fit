@@ -1,0 +1,2321 @@
+
+# CALO FIT — AUTONOMOUS NATIVE ANDROID MASTER DEVELOPMENT PROMPT
+## Premium Liquid Glass Edition — Production-Quality Offline-First Nutrition & Wellness Application
+
+**PROJECT:** Calo Fit  
+**PERSIAN BRAND:** کالو فیت  
+**PACKAGE:** com.calofit.app  
+**PLATFORM:** Native Android  
+**LANGUAGES:** Persian (fa-IR) and English (en-US)  
+**TECHNOLOGY:** Kotlin, Jetpack Compose, Material 3  
+**ARCHITECTURE:** MVVM, Clean Architecture principles  
+**DATABASE:** Room  
+**PREFERENCES:** DataStore  
+**NAVIGATION:** Navigation Compose  
+**BACKGROUND TASKS:** WorkManager  
+**AI:** Gemini through Firebase AI Logic, when configured  
+**DESIGN LANGUAGE:** Premium 3D Liquid Glass / Translucent Glassmorphism  
+**THEMES:** Light Liquid Glass and Dark Liquid Glass  
+**BUSINESS MODEL:** Freemium  
+**PRIMARY REQUIREMENT:** Fully functional native Android application without a personal server, mandatory account, mandatory hosting, or ongoing backend administration.
+
+---
+
+# 1. YOUR ROLE AND MISSION
+
+Act as an autonomous senior Android development team consisting of:
+
+- Principal Android Architect
+- Senior Kotlin Developer
+- Jetpack Compose Engineer
+- Premium UI/UX Designer
+- 3D Visual Design Specialist
+- Database Engineer
+- Nutrition Calculation Specialist
+- AI Integration Engineer
+- Security Engineer
+- Performance Engineer
+- QA Engineer
+
+Your responsibility is to independently design, implement, test, debug, optimize, and deliver the actual Calo Fit Android application.
+
+I do not want a tutorial, design proposal, architectural explanation, or static prototype.
+
+I want actual working software.
+
+Create and modify real project files using the capabilities available in Google AI Studio.
+
+Priorities:
+
+1. Functional native Android application.
+2. Excellent Liquid Glass visual design.
+3. Fast and smooth performance.
+4. Reliable offline database.
+5. Accurate nutrition calculations.
+6. Complete Persian and English localization.
+7. Genuine AI functionality when configured.
+8. Security and privacy.
+9. Testing and quality assurance.
+10. Optional commercial features.
+
+Never claim that something has been implemented, executed, tested, or verified unless it actually has.
+
+# 2. STRICT DEVELOPMENT ENVIRONMENT
+
+I am using Google AI Studio Build mode.
+
+Before development:
+
+1. Inspect the actual environment.
+2. Verify that Android is selected.
+3. Inspect available project files.
+4. Verify Kotlin and Jetpack Compose support.
+5. Identify available emulator capabilities.
+6. Identify available build and export tools.
+7. Identify supported Firebase integrations.
+
+Build a genuine native Android application.
+
+Required technologies:
+
+- Kotlin
+- Jetpack Compose
+- Material 3
+- AndroidX
+- Coroutines
+- StateFlow
+- ViewModel
+- Room
+- DataStore
+- Navigation Compose
+- WorkManager
+- Android native APIs
+
+Use a supported single-activity, single-application-module structure.
+
+Organize code into logical packages.
+
+Do not create a website, React application, Flutter application, React Native application, or WebView application.
+
+Respect actual environment limitations. Never invent unavailable tools or capabilities.
+
+# 3. AUTONOMOUS DEVELOPMENT
+
+Perform actual development work.
+
+Do not repeatedly ask for approval for ordinary programming operations.
+
+Automatically:
+
+- Create project files.
+- Write Kotlin code.
+- Configure supported dependencies.
+- Build UI screens.
+- Implement database entities.
+- Implement navigation.
+- Create resources.
+- Write tests.
+- Fix compilation errors.
+- Optimize performance.
+- Verify functionality.
+
+Maintain:
+
+- PROJECT_STATUS.md
+- IMPLEMENTATION_CHECKLIST.md
+- ARCHITECTURE.md
+- DATABASE_SCHEMA.md
+- TEST_REPORT.md
+- SECURITY_REVIEW.md
+- KNOWN_LIMITATIONS.md
+- SETUP_REQUIREMENTS.md
+
+Track features as:
+
+- Not Started
+- In Progress
+- Implemented
+- Compiled
+- Tested
+- Verified
+- Blocked
+- Requires External Configuration
+
+Preserve existing work when continuing development.
+
+Never reset databases or delete user data during ordinary updates.
+
+If execution limits are reached, document the exact development state and next task.
+
+# 4. CRITICAL ARCHITECTURE — NO PERSONAL SERVER
+
+I do not own a server and do not want to maintain one.
+
+Do not require:
+
+- VPS
+- Linux server
+- Docker
+- Custom backend
+- Personal APIs
+- Self-hosted database
+- Manual backend deployments
+- Server administration
+
+The essential application must operate directly on Android.
+
+Use:
+
+1. Android native functionality.
+2. Room local database.
+3. DataStore.
+4. On-device calculations.
+5. Local files.
+6. Android system APIs.
+7. Optional managed cloud services.
+
+All essential information must remain locally accessible:
+
+- User profile
+- Food database
+- Food logs
+- Recipes
+- Weight records
+- Water records
+- Activity records
+- Nutrition goals
+- Reports
+- Achievements
+- Preferences
+- Historical records
+
+No mandatory registration.
+
+No mandatory Google Sign-In.
+
+No mandatory email or phone number.
+
+No mandatory cloud synchronization.
+
+Gemini is an online AI service and must not be represented as offline functionality.
+
+The essential application must continue operating without internet.
+
+# 5. BRAND IDENTITY AND VISUAL DIRECTION — LIQUID GLASS
+
+<IMPORTANT>
+
+The entire Calo Fit application must use a consistent, premium, polished, 3D Liquid Glass visual language.
+
+This is a fundamental product requirement, not an optional decorative effect.
+
+The three uploaded reference images are the primary visual references.
+
+Study them carefully and use them as design inspiration throughout the entire application.
+
+Do not merely imitate one screen.
+
+Translate their visual language into a complete, coherent, reusable native Android design system.
+
+</IMPORTANT>
+
+## 5.1. Primary visual references
+
+**Reference 1 — Fitness App Interface**
+
+Use its visual direction for:
+
+- Main color palette.
+- Dashboard composition.
+- Nutrition and activity cards.
+- Circular progress indicators.
+- Elegant charts.
+- Minimal typography.
+- Bright lime-green accents.
+- Light, spacious backgrounds.
+- Premium fitness-app appearance.
+
+**Reference 2 — Liquid Glass App Icon**
+
+Use its visual direction for:
+
+- Three-dimensional translucent glass.
+- Rounded-square geometry.
+- Refraction.
+- Subtle iridescent reflections.
+- Glossy highlights.
+- Soft internal glow.
+- Floating glass appearance.
+- Premium material quality.
+
+**Reference 3 — Liquid Glass UI Kit**
+
+Use its visual direction for:
+
+- Buttons.
+- Text fields.
+- Switches.
+- Selection controls.
+- Navigation elements.
+- Floating panels.
+- Dialogs.
+- Cards.
+- Glass containers.
+- Interactive controls.
+
+Do not copy the music note, unrelated branding, or text from the reference images.
+
+Create original Calo Fit assets and components.
+
+## 5.2. Visual identity
+
+Brand personality:
+
+- Scientific
+- Friendly
+- Intelligent
+- Premium
+- Modern
+- Elegant
+- Trustworthy
+- Minimal
+- Motivating
+
+The interface should look like a premium next-generation health and wellness application.
+
+Avoid generic Material Design dashboards.
+
+Avoid flat, ordinary white cards as the primary design language.
+
+Avoid excessive gradients and unnecessary decoration.
+
+Avoid cartoonish graphics.
+
+Avoid an overly futuristic or cyberpunk appearance.
+
+The result must be elegant, realistic, refined, and professionally designed.
+
+## 5.3. Color system
+
+Use the following core colors as the starting point.
+
+**Light theme:**
+
+- Main background: #F1F5F5
+- Secondary background: #E9EEEE
+- Primary accent: #A6ED37
+- Secondary accent: #C5F46B
+- Primary text: #222A2A
+- Secondary text: #737D80
+- Success: #43B98A
+- Warning: #F2B85B
+- Error: #E46C79
+- Glass surface: translucent white
+- Glass border: translucent white with subtle highlights
+
+**Dark theme:**
+
+- Main background: #101716
+- Secondary background: #171F1E
+- Primary accent: #B5F34B
+- Secondary accent: #8CCF35
+- Primary text: #F1F5F0
+- Secondary text: #A1ADA7
+- Glass surface: translucent dark gray
+- Glass border: subtle translucent white
+- Highlight: controlled lime-green illumination
+
+Create a unified color token system.
+
+Do not hardcode colors independently across screens.
+
+Use semantic color tokens for:
+
+- Backgrounds
+- Surfaces
+- Glass layers
+- Text
+- Icons
+- Borders
+- Highlights
+- Shadows
+- Interactive states
+- Charts
+- Status indicators
+
+## 5.4. Liquid Glass material
+
+Create a reusable Liquid Glass design system.
+
+The material should visually communicate:
+
+- Transparency
+- Depth
+- Refraction
+- Soft reflections
+- Rounded edges
+- Layered surfaces
+- Subtle specular highlights
+- Controlled blur
+- Realistic glass borders
+- Soft ambient shadows
+
+Use different glass treatments depending on component importance.
+
+Implement:
+
+**Primary Glass:** Main dashboard cards and important panels.
+
+**Secondary Glass:** Small information cards and content containers.
+
+**Floating Glass:** Bottom navigation, floating actions, overlays, and contextual controls.
+
+**Interactive Glass:** Buttons, switches, selectors, text fields, and other controls.
+
+**Accent Glass:** Lime-green highlighted progress elements and important actions.
+
+Create consistent corner radii, internal padding, border thickness, shadows, and transparency.
+
+Glass surfaces must maintain excellent readability.
+
+Do not make text itself excessively transparent.
+
+Do not reduce contrast to achieve a glass appearance.
+
+## 5.5. Liquid Glass buttons
+
+Every major interactive control must follow the Liquid Glass design system.
+
+Create reusable Compose components for:
+
+- Primary buttons
+- Secondary buttons
+- Icon buttons
+- Floating action buttons
+- Pill buttons
+- Text fields
+- Search fields
+- Switches
+- Checkboxes
+- Radio controls
+- Segmented controls
+- Dropdown menus
+- Navigation items
+- Tabs
+- Chips
+- Dialog actions
+
+Button states must include:
+
+- Default
+- Pressed
+- Focused
+- Disabled
+- Loading
+- Selected
+
+Use subtle scale, brightness, and highlight changes.
+
+Avoid excessive bouncing or distracting animation.
+
+Primary actions should use the lime-green glass accent.
+
+Secondary actions should use neutral translucent glass.
+
+Destructive actions should use a clear, restrained error treatment.
+
+## 5.6. Dashboard visual direction
+
+The home dashboard must follow the first reference image.
+
+Create a premium composition containing:
+
+- Personalized greeting.
+- Profile avatar.
+- Notification control.
+- Daily calorie summary.
+- Circular calorie progress.
+- Macronutrient indicators.
+- Water progress.
+- Meal summary.
+- Weight progress.
+- Activity summary.
+- Elegant nutrition charts.
+- Quick-add actions.
+
+Use translucent layered panels.
+
+Use lime-green circular progress indicators.
+
+Use subtle depth and highlights.
+
+Keep the interface spacious and uncluttered.
+
+All values must come from actual user data or real calculations.
+
+Do not use random sample values.
+
+## 5.7. Custom 3D app icon
+
+Create an original, professional Calo Fit launcher icon.
+
+Use the second reference image as the primary material and rendering inspiration.
+
+The icon must communicate nutrition, health, food, and fitness.
+
+Create an original symbol by intelligently combining concepts such as:
+
+- Apple
+- Leaf
+- Calorie measurement
+- Nutrition
+- Health
+
+The final symbol should be recognizable at small sizes.
+
+Design requirements:
+
+- Three-dimensional translucent glass.
+- Rounded-square glass container.
+- Soft lime-green and subtle iridescent reflections.
+- Refraction and realistic highlights.
+- Premium glossy material.
+- Subtle internal illumination.
+- Clean silhouette.
+- Strong visual recognition.
+- No unnecessary text.
+- No generic clipart.
+
+The icon must be original.
+
+Do not simply place an ordinary apple emoji inside a glass square.
+
+Create appropriate assets for:
+
+- Android adaptive launcher icon.
+- Foreground layer.
+- Background layer.
+- High-resolution icon.
+- Splash screen.
+
+Use actual generated image assets when image-generation capabilities are available.
+
+If unavailable, create the closest high-quality supported vector or drawable implementation.
+
+Do not falsely claim to have generated a 3D asset when only a simple vector has been created.
+
+## 5.8. Splash screen
+
+Create a premium branded splash screen.
+
+Include:
+
+- Calo Fit glass icon.
+- Elegant background.
+- Subtle illumination.
+- Minimal brand presentation.
+- Smooth transition into the application.
+
+Avoid unnecessarily long splash animations.
+
+# 6. LIGHT AND DARK LIQUID GLASS THEMES
+
+The user must be able to choose:
+
+1. Light Liquid Glass.
+2. Dark Liquid Glass.
+3. Follow System.
+
+Place the control in:
+
+Profile → Settings → Appearance.
+
+Persist the selected theme using DataStore.
+
+Apply the selected theme consistently across the entire application.
+
+## Light Liquid Glass
+
+Use:
+
+- Cool white and pale gray backgrounds.
+- Translucent white glass.
+- Soft gray shadows.
+- Subtle lime-green highlights.
+- Bright reflections.
+- Elegant light surfaces.
+
+## Dark Liquid Glass
+
+Use:
+
+- Deep charcoal and dark green-gray backgrounds.
+- Translucent dark glass.
+- Controlled luminous borders.
+- Subtle lime-green highlights.
+- Soft reflections.
+- Properly readable light text.
+
+The dark theme must not be a simple inversion of the light theme.
+
+Redesign the glass appearance specifically for dark backgrounds.
+
+Changing themes must:
+
+- Work immediately.
+- Preserve user data.
+- Preserve navigation state where possible.
+- Avoid unnecessary screen recreation.
+- Avoid flicker.
+- Avoid restarting the application.
+
+Test both themes on all major screens.
+
+# 7. PERFORMANCE — ABSOLUTELY CRITICAL
+
+The Liquid Glass visual style must not cause noticeable performance degradation.
+
+A beautiful interface that is slow, laggy, battery-intensive, or memory-heavy is unacceptable.
+
+Treat performance as a non-negotiable engineering requirement.
+
+## Performance principles
+
+1. Never apply expensive blur to every UI element.
+2. Avoid multiple nested real-time blur layers.
+3. Avoid full-screen blur unless strictly necessary.
+4. Avoid continuously running animations.
+5. Avoid unnecessary recompositions.
+6. Avoid large unoptimized images.
+7. Avoid unnecessary GPU effects.
+8. Avoid excessive shadows.
+9. Avoid unnecessary background services.
+10. Avoid expensive calculations during UI rendering.
+
+## Efficient Liquid Glass implementation
+
+Use a performance-aware combination of:
+
+- Pre-rendered glass textures where appropriate.
+- Static translucent surfaces.
+- Gradient highlights.
+- Lightweight borders.
+- Efficient alpha compositing.
+- Carefully limited blur.
+- Reusable Compose modifiers.
+- Cached visual resources.
+- Hardware-accelerated rendering where appropriate.
+- Optimized vector assets.
+
+Use real-time blur only for selected important components when it is supported and efficient.
+
+Do not assume that every Android version supports the same blur APIs.
+
+Use compatible fallbacks.
+
+For example:
+
+- Modern devices may use supported background blur for selected overlays.
+- Older devices should use carefully designed translucent surfaces and static highlights.
+
+The visual identity must remain consistent even when blur is reduced.
+
+Do not create expensive shaders or custom rendering pipelines unless they provide a measurable benefit.
+
+## Animation performance
+
+Use short, smooth, intentional animations.
+
+Prefer:
+
+- Alpha transitions.
+- Lightweight scale animations.
+- Efficient progress animations.
+- Subtle elevation changes.
+- Small motion transitions.
+
+Do not animate every glass reflection continuously.
+
+Do not use perpetual shimmer effects.
+
+Respect system animation and reduced-motion settings.
+
+## Device targets
+
+Optimize for ordinary mid-range Android phones.
+
+Prioritize:
+
+- Smooth scrolling.
+- Fast startup.
+- Low RAM consumption.
+- Low CPU usage.
+- Low battery consumption.
+- Efficient image loading.
+- Responsive navigation.
+- Efficient database queries.
+
+Target a smooth 60 FPS experience on supported mid-range devices.
+
+Measure actual performance where profiling tools are available.
+
+Never claim measured performance without measurements.
+
+If a visual effect causes lag, simplify the implementation while preserving the Liquid Glass appearance.
+
+# 8. COMPLETE APPLICATION NAVIGATION
+
+Use four primary bottom navigation destinations:
+
+1. Home
+2. Food Log
+3. Progress
+4. Profile
+
+Implement the following functional screens:
+
+1. Language Selection
+2. Welcome
+3. Onboarding
+4. Personal Profile
+5. Home Dashboard
+6. Food Search
+7. Food Details
+8. Add Food
+9. Food Image Recognition
+10. Barcode Scanner
+11. Meal History
+12. Meal Details
+13. Recipe Creator
+14. Weight Tracking
+15. Weight History
+16. Water Tracking
+17. Activity Tracking
+18. AI Nutrition Coach
+19. Weekly Meal Planner
+20. Grocery List
+21. Reports
+22. Achievements
+23. Settings
+24. Appearance Settings
+25. Regional Settings
+26. Notification Settings
+27. Premium
+28. Privacy
+29. Support
+30. About
+31. Data Export
+32. Data Management
+
+Every screen must follow the same Liquid Glass design system.
+
+Do not create empty screens merely to satisfy this list.
+
+Do not expose a feature until its essential functionality exists.
+
+Every visible button must perform a genuine action.
+
+Implement loading, empty, error, success, and validation states.
+
+# 9. FIRST-LAUNCH EXPERIENCE
+
+On a fresh installation, display language selection first.
+
+Persian:
+
+به کالو فیت خوش آمدید
+
+زبان موردنظرتان را انتخاب کنید.
+
+English:
+
+Welcome to Calo Fit
+
+Choose your preferred language.
+
+Use:
+
+- Original glass app icon.
+- Elegant Liquid Glass background.
+- Persian option.
+- English option.
+- Glass selection controls.
+- Lime-green accent.
+- Premium continue button.
+
+After selection:
+
+1. Save language in DataStore.
+2. Apply locale.
+3. Configure RTL or LTR.
+4. Navigate to onboarding.
+
+On subsequent launches, skip language selection.
+
+Allow changing language through Settings.
+
+Language changes must never delete user data.
+
+# 10. COMPLETE LOCALIZATION
+
+Implement complete Persian and English localization.
+
+Persian:
+
+- Natural Persian translations.
+- Correct RTL layout.
+- Appropriate Persian typography.
+- Jalali calendar.
+- Configurable Persian and Latin digits.
+- Localized numbers.
+- Localized notifications.
+- Correct icon and navigation direction.
+
+English:
+
+- Natural English.
+- Correct LTR layout.
+- Gregorian calendar.
+- International number formatting.
+
+Regional settings must be independent of interface language.
+
+Support:
+
+- Country
+- Currency
+- Calendar
+- Time zone
+- Number format
+- Weight units
+- Height units
+- Water units
+- Food measurement units
+
+Never hardcode user-facing strings in business logic.
+
+Localize all screens, dialogs, notifications, reports, charts, errors, and accessibility descriptions.
+
+Test Persian and English separately.
+
+# 11. ONBOARDING AND PERSONAL PROFILE
+
+Create a polished Liquid Glass onboarding experience.
+
+Collect:
+
+1. First name.
+2. Age or date of birth.
+3. Appropriate metabolic calculation profile.
+4. Height.
+5. Current weight.
+6. Activity level.
+7. Weight goal.
+8. Target weight.
+9. Preferred weight-change rate.
+10. Dietary preferences.
+11. Allergies.
+12. Food restrictions.
+13. Optional health considerations.
+
+Requirements:
+
+- Progress indicator.
+- Glass selection controls.
+- Clear explanations.
+- Back navigation.
+- Validation.
+- Persistent progress.
+- Editable profile.
+- Optional questions.
+- Skip options.
+- Minimal data collection.
+
+Allow users to skip weight-loss planning.
+
+Never force collection of sensitive health information.
+
+Never infer medical conditions from incomplete information.
+
+# 12. NUTRITION CALCULATION ENGINE
+
+Implement a separate, reusable, thoroughly tested calculation engine.
+
+Never place business calculations inside Compose UI components.
+
+## BMI
+
+BMI = Weight (kg) / Height (m)²
+
+Display standard adult BMI categories.
+
+Explain that BMI is a screening tool, not a complete health assessment.
+
+Never apply adult BMI categories to children.
+
+## BMR
+
+Use Mifflin-St Jeor.
+
+Male:
+
+BMR = 10 × weight + 6.25 × height - 5 × age + 5
+
+Female:
+
+BMR = 10 × weight + 6.25 × height - 5 × age - 161
+
+Units:
+
+- Weight: kg
+- Height: cm
+- Age: years
+
+Allow the user to select the appropriate calculation profile.
+
+Do not infer it from their name.
+
+Explain that calculations are estimates.
+
+## TDEE
+
+Calculate estimated daily energy expenditure using configurable activity multipliers.
+
+## Nutrition goals
+
+Support:
+
+- Weight loss.
+- Weight maintenance.
+- Weight gain.
+
+Calculate:
+
+- Calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Fiber.
+- General hydration guidance.
+
+Allow adjustable goals with sensible safety boundaries.
+
+Never automatically generate weight-loss targets for minors, pregnant users, breastfeeding users, or people requiring specialized medical nutrition management.
+
+Provide appropriate professional-care guidance.
+
+Write unit tests for formulas, boundaries, and edge cases.
+
+# 13. OFFLINE FOOD DATABASE
+
+Create a structured, searchable, expandable local food database.
+
+Bundle a meaningful initial dataset with the application.
+
+Food search must work without internet.
+
+## Iranian foods
+
+Include:
+
+- Ghormeh Sabzi
+- Gheymeh
+- Fesenjan
+- Zereshk Polo
+- Adas Polo
+- Loobia Polo
+- Abgoosht
+- Different kebabs
+- Iranian rice
+- Sangak
+- Barbari
+- Lavash
+- Yogurt
+- Doogh
+- Traditional soups
+- Fruits
+- Vegetables
+- Nuts
+- Dairy
+- Common Iranian snacks
+
+## International foods
+
+Include:
+
+- Eggs
+- Chicken
+- Fish
+- Beef
+- Rice
+- Pasta
+- Bread
+- Fruits
+- Vegetables
+- Nuts
+- Dairy
+- Packaged foods
+- Common snacks
+- Basic ingredients
+
+Use reliable and appropriately licensed sources such as USDA FoodData Central and Open Food Facts.
+
+Respect licensing and attribution requirements.
+
+Each food record should support:
+
+- Localized name
+- Serving size
+- Serving unit
+- Gram weight
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+- Fiber
+- Sugar
+- Sodium when available
+- Data source
+- Verification status
+- Last updated date
+
+Classify records as:
+
+- Verified
+- Estimated
+- User-entered
+
+Never fabricate exact nutritional values.
+
+Clearly identify estimated values.
+
+## Homemade recipes
+
+Support:
+
+- Ingredients.
+- Ingredient quantities.
+- Cooking method.
+- Oil quantities.
+- Final cooked weight.
+- Portion size.
+
+Calculate nutrition using actual ingredient quantities.
+
+Support custom foods, recipes, and favorites.
+
+Prioritize nutritional accuracy over database size.
+
+# 14. FOOD LOGGING
+
+Support:
+
+- Breakfast
+- Morning snack
+- Lunch
+- Afternoon snack
+- Dinner
+- Evening snack
+
+Allow users to:
+
+- Add food.
+- Edit food.
+- Delete food.
+- Duplicate meals.
+- Save favorites.
+- Create recipes.
+- Save frequent meals.
+
+Each entry must preserve:
+
+- Food ID
+- Food name
+- Quantity
+- Unit
+- Gram weight
+- Calories
+- Macronutrients
+- Date
+- Time
+- Meal category
+
+Update nutritional totals immediately.
+
+Use database transactions where appropriate.
+
+Prevent duplicate records when operations are retried.
+
+Preserve historical nutritional snapshots when food database values change.
+
+Design food logging with elegant Liquid Glass cards and intuitive controls.
+
+# 15. AI FOOD IMAGE RECOGNITION
+
+Implement genuine multimodal food recognition using Gemini through Firebase AI Logic when configured.
+
+Support:
+
+- Camera capture.
+- Gallery selection.
+- Image preview.
+- Cropping.
+- Image removal.
+- Analysis.
+- Results review.
+
+Recognize:
+
+- Food name.
+- Visible ingredients.
+- Possible cooking method.
+- Estimated portion.
+- Estimated weight.
+- Estimated calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+
+A photograph cannot reliably determine exact food weight, hidden ingredients, oil quantity, or exact calories.
+
+Therefore:
+
+1. Mark image-based results as estimates.
+2. Display uncertainty.
+3. Ask clarifying questions when needed.
+4. Allow manual corrections.
+5. Allow portion adjustments.
+6. Require confirmation before saving.
+7. Never silently save unconfirmed results.
+8. Never invent invisible ingredients.
+9. Explain important assumptions.
+
+For Iranian mixed dishes, ask for additional information when necessary.
+
+Request consent before uploading images.
+
+Delete temporary images when no longer needed.
+
+Manual food logging must always work without AI.
+
+# 16. GEMINI AI ARCHITECTURE
+
+Create a modular provider-independent AI architecture.
+
+Define:
+
+- AIService
+- GeminiProvider
+- AIProviderRouter
+- AIFallbackHandler
+- AIUsageManager
+
+Use Firebase AI Logic when supported and configured.
+
+Use Firebase App Check and an appropriate supported production attestation provider.
+
+Never embed raw Gemini API secrets or private credentials in the APK.
+
+Never hardcode secret credentials in source code.
+
+AI request flow:
+
+1. Check connectivity.
+2. Check local capabilities.
+3. Check cached results.
+4. Call configured AI provider.
+5. Validate structured output.
+6. Handle errors.
+7. Retry with limits.
+8. Apply usage limits.
+9. Provide manual fallback.
+
+Implement:
+
+- Timeouts.
+- Retry limits.
+- Usage tracking.
+- Cost awareness.
+- Privacy controls.
+- Response validation.
+- Graceful failure.
+- Request cancellation.
+
+Never claim offline AI without a genuine local model.
+
+If Firebase authorization or setup is required, request the supported authorization action.
+
+Continue unrelated development while waiting.
+
+Never activate paid services without authorization.
+
+# 17. BARCODE SCANNER
+
+Implement a genuine barcode scanner using a compatible Android library such as ML Kit.
+
+Support:
+
+- Camera preview.
+- Barcode detection.
+- Product lookup.
+- Manual fallback.
+- Search history.
+- Local caching.
+
+Use Open Food Facts or another suitable product database.
+
+Display:
+
+- Product name.
+- Brand.
+- Serving size.
+- Calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Sugar.
+- Product image when available.
+- Data source.
+
+Distinguish local barcode detection from online product lookup.
+
+If a barcode is unknown, never fabricate information.
+
+Allow manual product creation.
+
+Request camera permission only when necessary.
+
+# 18. WEIGHT, WATER AND ACTIVITY TRACKING
+
+## Weight
+
+Implement:
+
+- Add weight.
+- Edit weight.
+- Delete weight.
+- Historical records.
+- Target weight.
+- Progress.
+- Trend analysis.
+
+Charts:
+
+- 7 days
+- 30 days
+- 3 months
+- 6 months
+- 1 year
+- All history
+
+Use actual database records.
+
+Handle irregular measurement intervals correctly.
+
+Avoid misleading trends.
+
+Support kg and lb.
+
+## Water
+
+Implement:
+
+- Personalized hydration guidance.
+- Add water.
+- Custom volume.
+- Common serving sizes.
+- Water history.
+- Daily progress.
+- Optional reminders.
+
+Allow reminder customization.
+
+Never present one fixed water requirement as suitable for everyone.
+
+## Physical activity
+
+Support:
+
+- Walking.
+- Running.
+- Cycling.
+- Strength training.
+- Home workouts.
+- Other activities.
+
+Allow manual entry.
+
+Record:
+
+- Activity type.
+- Duration.
+- Date.
+- Time.
+- Estimated energy expenditure.
+
+Clearly identify estimated calories.
+
+Avoid double-counting exercise calories.
+
+Do not request location permission for manual activity tracking.
+
+# 19. AI NUTRITION COACH
+
+Create a conversational AI nutrition assistant.
+
+It must:
+
+- Respond in the selected language.
+- Understand authorized food-log data.
+- Understand nutrition goals.
+- Explain nutrition simply.
+- Suggest balanced meals.
+- Answer food questions.
+- Explain calories and macronutrients.
+- Encourage healthy habits.
+- Provide evidence-aware information.
+
+Never:
+
+- Diagnose diseases.
+- Prescribe medication.
+- Recommend dangerous diets.
+- Encourage extreme calorie restriction.
+- Present AI output as medical advice.
+- Invent scientific references.
+- Claim certainty when evidence is insufficient.
+
+Identify uncertainty.
+
+Recommend professional evaluation when appropriate.
+
+Allow deletion of AI conversation history.
+
+Implement configurable usage limits.
+
+Only transmit the minimum necessary personal information for each request.
+
+AI must never be required for basic application use.
+
+# 20. WEEKLY MEAL PLANNER AND GROCERY LIST
+
+Create a personalized weekly meal planner.
+
+Consider:
+
+- Calorie goals.
+- Nutrition goals.
+- Food preferences.
+- Allergies.
+- Dietary restrictions.
+- Budget.
+- Available ingredients.
+- Cooking time.
+- Cuisine.
+- Regional food availability.
+
+Support Iranian and international meals.
+
+Each meal includes:
+
+- Name.
+- Ingredients.
+- Portion sizes.
+- Preparation instructions.
+- Estimated calories.
+- Macronutrients.
+- Preparation time.
+
+Generate grocery lists.
+
+Allow meal replacement and customization.
+
+Never include known allergens.
+
+Never guarantee clinical suitability for medical conditions.
+
+Never fabricate nutritional values.
+
+Cache saved plans locally.
+
+Allow manual planning without AI.
+
+# 21. REPORTS AND ANALYTICS
+
+Create weekly and monthly reports.
+
+Include:
+
+- Average calories.
+- Protein.
+- Carbohydrates.
+- Fat.
+- Water.
+- Weight changes.
+- Activity.
+- Goal consistency.
+- Meal patterns.
+
+Support:
+
+- Elegant charts.
+- PDF export.
+- Sharing.
+- Historical reports.
+
+Use the Liquid Glass visual system for charts and reporting panels.
+
+Localize reports.
+
+Generate reports exclusively from actual user records.
+
+Never manufacture missing historical data.
+
+Reports must work offline.
+
+# 22. GAMIFICATION
+
+Implement:
+
+- Daily streaks.
+- Achievement badges.
+- Weekly challenges.
+- Habit tracking.
+- Positive encouragement.
+
+Use elegant glass badges and progress indicators.
+
+Avoid shame-based language.
+
+Never reward unhealthy calorie restriction or rapid weight loss.
+
+Reward:
+
+- Consistency.
+- Balanced eating.
+- Hydration.
+- Sustainable habits.
+
+Allow disabling gamification.
+
+# 23. DATABASE AND PERSISTENCE
+
+Use Room for reliable local persistence.
+
+Suggested entities:
+
+- UserProfile
+- UserPreferences
+- WeightRecord
+- FoodItem
+- FoodEntry
+- Meal
+- Recipe
+- DailyNutrition
+- WaterRecord
+- ActivityRecord
+- NutritionGoal
+- FavoriteFood
+- FoodBarcode
+- ReminderSettings
+- SubscriptionState
+- AIUsageRecord
+- Achievement
+- AIConversation
+
+Implement:
+
+- Primary keys.
+- Foreign keys.
+- Indices.
+- Relationships.
+- Transactions.
+- Validation.
+- Database migrations.
+- Stable unique IDs.
+
+Use DataStore for preferences.
+
+Preserve data across restarts.
+
+Never reset the database during normal updates.
+
+Implement reliable schema migrations.
+
+Prevent duplicate records.
+
+Preserve historical records.
+
+Support backup and restore.
+
+Implement a versioned and validated backup format.
+
+Handle corrupted or incompatible backups safely.
+
+# 24. STRICT OFFLINE-FIRST FUNCTIONALITY
+
+The following must work completely without internet:
+
+- Application startup.
+- Language selection.
+- Persian and English interfaces.
+- User profile.
+- Onboarding.
+- Nutrition calculations.
+- BMI.
+- BMR.
+- TDEE.
+- Calorie goals.
+- Macronutrients.
+- Local food database.
+- Food search.
+- Manual food logging.
+- Meal management.
+- Recipe creation.
+- Weight tracking.
+- Water tracking.
+- Activity tracking.
+- Historical records.
+- Charts.
+- Weekly reports.
+- Settings.
+- Local reminders.
+- Data export.
+- Backup and restoration.
+
+Online-dependent features may include:
+
+- Gemini AI.
+- Barcode product lookup.
+- Cloud synchronization.
+- Subscription verification.
+- External food databases.
+
+When offline:
+
+- Do not lose user data.
+- Keep local functionality available.
+- Display clear offline states.
+- Queue synchronization where appropriate.
+- Never show fake synchronization success.
+- Never pretend Gemini is responding.
+
+Test core functionality in airplane mode.
+
+# 25. LOCAL DATA OWNERSHIP AND BACKUP
+
+The user owns their local information.
+
+Implement:
+
+- Local data backup.
+- Local data restoration.
+- JSON export.
+- CSV export where appropriate.
+- Human-readable PDF reports.
+- Full local data deletion.
+- Optional cloud synchronization.
+
+Use Android Storage Access Framework for user-controlled file access.
+
+Use versioned backup formats.
+
+Validate imported files before restoring.
+
+Provide safe recovery from invalid backups.
+
+Do not silently upload information.
+
+Do not silently delete records.
+
+Do not lose historical data during application updates.
+
+Clearly explain which information stays on the device and which information may be transmitted externally.
+
+# 26. SECURITY AND PRIVACY
+
+Treat nutrition and personal profile information as sensitive.
+
+Implement:
+
+- HTTPS.
+- Input validation.
+- Minimum permissions.
+- Android Keystore where appropriate.
+- Protected sensitive local information.
+- Firebase App Check when required.
+- Controlled image uploads.
+- User-controlled deletion.
+- Transparent privacy disclosures.
+
+Never expose secret API keys in the APK.
+
+Never transmit personal information or images without appropriate consent.
+
+Do not collect unnecessary personal information.
+
+Implement:
+
+- Privacy settings.
+- Data export.
+- Local data deletion.
+- AI history deletion.
+- Cloud data deletion when cloud services are configured.
+
+Never log private health information, credentials, or personal images.
+
+Use encrypted storage where justified.
+
+Clearly explain limitations of client-side applications.
+
+# 27. NOTIFICATIONS
+
+Use Android notifications and WorkManager where appropriate.
+
+Support:
+
+- Water reminders.
+- Meal reminders.
+- Weight reminders.
+- Activity reminders.
+- Daily goals.
+
+Requirements:
+
+- User-controlled scheduling.
+- Enable/disable.
+- Localized notifications.
+- Permission handling.
+- Quiet hours.
+- Time-zone awareness.
+
+Use appropriate Liquid Glass visual assets in notification-compatible contexts without relying on unsupported notification rendering effects.
+
+Do not send unwanted notifications.
+
+Request permissions only when necessary.
+
+Respect Android battery and scheduling restrictions.
+
+All essential reminder scheduling must work locally.
+
+# 28. FREEMIUM AND PREMIUM
+
+Create a modular subscription architecture.
+
+## Free
+
+- Profile.
+- BMI.
+- Nutrition calculations.
+- Manual food logging.
+- Basic food database.
+- Weight tracking.
+- Basic charts.
+- Water tracking.
+- Activity tracking.
+- Limited AI recognition.
+- Limited AI Coach.
+
+## Premium
+
+- Higher AI limits.
+- Advanced AI recognition.
+- Advanced AI Coach.
+- Weekly meal planner.
+- Advanced analytics.
+- Extended reports.
+- PDF export.
+- Advanced personalization.
+- Ad-free experience.
+
+Support configurable:
+
+- Monthly.
+- Three-month.
+- Annual.
+
+Never hardcode prices.
+
+Use regional pricing.
+
+Separate subscription logic from UI.
+
+Never unlock Premium through an unverified local Boolean.
+
+Implement entitlement checks.
+
+Keep the free version genuinely useful.
+
+Never require a subscription for essential offline features.
+
+If a real billing provider is not configured, keep purchases disabled and clearly label the feature as unavailable.
+
+Premium screens must also use the Liquid Glass visual system.
+
+# 29. PAYMENTS AND ADVERTISING
+
+Create modular payment and advertising interfaces.
+
+Potential payment providers:
+
+- Google Play Billing.
+- Cafe Bazaar.
+- Myket.
+- Other genuinely supported providers.
+
+Do not assume all providers are available.
+
+Support:
+
+- Purchase restoration.
+- Cancellation.
+- Expiration.
+- Pending purchases.
+- Refunds.
+- Duplicate event handling.
+
+Purchase verification must use trusted mechanisms.
+
+Secure verification may require a managed external backend or payment provider.
+
+Do not pretend client-side verification is sufficient.
+
+If merchant accounts, certificates, backend services, or credentials are missing:
+
+- Prepare integration interfaces.
+- Keep payment functionality disabled.
+- Document exact requirements.
+- Continue unrelated development.
+
+Advertising requirements:
+
+- Non-intrusive placements.
+- Configurable locations.
+- Premium ad-free experience.
+- Consent-aware advertising.
+- Privacy controls.
+- No accidental clicks.
+
+If no provider is configured, keep advertising disabled.
+
+Never use fake advertisements or credentials.
+
+Never activate paid services without authorization.
+
+# 30. ACCESSIBILITY
+
+Support:
+
+- TalkBack.
+- Semantic descriptions.
+- Color contrast.
+- Scalable text.
+- Touch-friendly controls.
+- Keyboard navigation where appropriate.
+- Reduced motion.
+
+Ensure every important action is accessible.
+
+Do not rely on color alone to communicate status.
+
+Liquid Glass effects must not interfere with readability or accessibility.
+
+Provide suitable contrast in both themes.
+
+# 31. VISUAL QUALITY CONTROL
+
+Visual quality is a first-class requirement.
+
+For every major screen:
+
+1. Inspect actual emulator rendering where supported.
+2. Check Liquid Glass material quality.
+3. Check glass transparency.
+4. Check border highlights.
+5. Check background and foreground separation.
+6. Check typography.
+7. Check spacing.
+8. Check colors.
+9. Check alignment.
+10. Check Persian RTL.
+11. Check English LTR.
+12. Check scrolling.
+13. Check different screen sizes.
+14. Check loading and empty states.
+15. Check dark and light themes.
+16. Check performance.
+
+Avoid:
+
+- Flat generic cards.
+- Inconsistent glass styles.
+- Excessive blur.
+- Text overflow.
+- Clipped buttons.
+- Incorrect RTL.
+- Misaligned icons.
+- Excessive empty space.
+- Unreadable charts.
+- Unnecessary decoration.
+- Heavy animations.
+- Low contrast.
+- Slow scrolling.
+
+Do not use the Liquid Glass style on only the home screen.
+
+Apply the complete visual system to all application features.
+
+Keep forms, settings, dialogs, reports, food search, meal logging, profile, navigation, and premium screens visually consistent.
+
+Do not sacrifice usability for decoration.
+
+# 32. TESTING AND QUALITY ASSURANCE
+
+Create actual automated tests.
+
+## Unit tests
+
+Test:
+
+- BMI.
+- BMR.
+- TDEE.
+- Calorie goals.
+- Macronutrients.
+- Portion calculations.
+- Food totals.
+- Weight trends.
+- Water totals.
+- Activity calculations.
+- Subscription entitlements.
+
+## Database tests
+
+Test:
+
+- Insert.
+- Read.
+- Update.
+- Delete.
+- Relationships.
+- Persistence.
+- Migrations.
+- Duplicate prevention.
+- Backup and restoration.
+
+## UI tests
+
+Test:
+
+- First-launch language selection.
+- Onboarding.
+- Language persistence.
+- Language switching.
+- RTL and LTR.
+- Navigation.
+- Food logging.
+- Weight entry.
+- Water tracking.
+- Settings.
+- Theme switching.
+- Error handling.
+
+## Integration tests
+
+Where supported, test:
+
+- Firebase AI Logic.
+- AI provider.
+- AI fallback.
+- Offline behavior.
+- Barcode lookup.
+- Synchronization.
+- Purchase handling.
+
+## Visual tests
+
+Where supported, inspect:
+
+- Light Liquid Glass.
+- Dark Liquid Glass.
+- Main dashboard.
+- Food logging.
+- Progress charts.
+- Profile.
+- Settings.
+- Dialogs.
+- Navigation.
+- Different screen sizes.
+
+## Performance tests
+
+Where tools are available, measure:
+
+- Startup time.
+- Frame rendering.
+- Memory consumption.
+- Scrolling performance.
+- Database response.
+- Image loading.
+- Battery-intensive operations.
+
+Run available compilation and build tasks.
+
+Fix all discovered errors.
+
+Never report unexecuted tests as passed.
+
+Maintain an accurate test report.
+
+# 33. STORE READINESS
+
+Prepare for:
+
+- Google Play.
+- Cafe Bazaar.
+- Myket.
+
+Generate:
+
+- App icon.
+- App description.
+- Screenshots.
+- Privacy policy draft.
+- Terms of service draft.
+- Data safety information.
+- Subscription disclosures.
+- Advertising disclosures.
+- Permission explanations.
+- Medical disclaimer.
+
+Implement account deletion only where an account system exists.
+
+Check current store policies before finalization.
+
+Prepare internal testing when supported.
+
+Do not claim public publishing is complete when only internal testing is available.
+
+Do not invent developer accounts or approvals.
+
+# 34. IMPLEMENTATION ROADMAP
+
+This is a large application.
+
+Do not implement everything superficially in one pass.
+
+Build incrementally, verify each phase, and preserve working functionality.
+
+Continue automatically whenever the environment permits.
+
+## PHASE 1 — DESIGN SYSTEM AND WORKING OFFLINE CORE
+
+First create:
+
+- Native Android project.
+- Branding.
+- Custom Liquid Glass app icon.
+- Adaptive launcher icon.
+- Splash screen.
+- Design tokens.
+- Liquid Glass components.
+- Light Liquid Glass theme.
+- Dark Liquid Glass theme.
+- Theme switching.
+- Persian localization.
+- English localization.
+- RTL and LTR.
+- Language selection.
+- Onboarding.
+- Profile.
+- Dashboard.
+- Nutrition calculations.
+- Room database.
+- DataStore.
+- Initial offline food database.
+- Iranian food support.
+- International food support.
+- Food search.
+- Manual food logging.
+- Meal management.
+- Recipes.
+- Weight tracking.
+- Charts.
+- Water tracking.
+- Activity tracking.
+- Settings.
+- Local reminders.
+- Offline functionality.
+- Local backup and export.
+
+Acceptance criteria:
+
+- Application compiles.
+- Application launches.
+- Language selection works.
+- Language persists.
+- Profile persists.
+- Food records persist.
+- Nutrition calculations work.
+- Weight tracking works.
+- Water tracking works.
+- Dashboard uses actual data.
+- Both visual themes work.
+- Liquid Glass appearance is consistent.
+- Core functionality works in airplane mode.
+- UI remains responsive.
+
+Complete and verify Phase 1 before advancing.
+
+## PHASE 2 — REAL AI FEATURES
+
+Implement:
+
+- AI interfaces.
+- Firebase AI Logic.
+- Firebase App Check.
+- Gemini integration.
+- Food image recognition.
+- Image processing.
+- Portion estimation.
+- User confirmation.
+- AI Coach.
+- Error handling.
+- AI usage management.
+
+Test integrations where available.
+
+## PHASE 3 — ADVANCED NUTRITION
+
+Implement:
+
+- Weekly meal planner.
+- Recipe creator.
+- Barcode scanner.
+- Product lookup.
+- Advanced reports.
+- PDF export.
+- Grocery list.
+
+## PHASE 4 — OPTIONAL CLOUD AND MONETIZATION
+
+Implement:
+
+- Optional authentication.
+- Cloud synchronization.
+- Free plan.
+- Premium architecture.
+- Purchase interfaces.
+- Advertising architecture.
+- Usage quotas.
+- Data export and recovery.
+
+Activate external services only when correctly configured.
+
+Do not make optional cloud functionality a requirement for the offline application.
+
+## PHASE 5 — FINAL QUALITY
+
+Perform:
+
+- Compilation verification.
+- Automated testing.
+- UI review.
+- Localization review.
+- RTL review.
+- Light and dark theme review.
+- Liquid Glass consistency review.
+- Accessibility review.
+- Performance review.
+- Security review.
+- Final bug fixing.
+
+Never break previously working phases.
+
+# 35. MANDATORY IMPLEMENTATION RULES
+
+1. Build a real native Android application.
+2. Never substitute a website or web application.
+3. Use Kotlin and Jetpack Compose.
+4. Use real database persistence.
+5. Implement a consistent Liquid Glass design system.
+6. Create an original 3D-inspired glass launcher icon.
+7. Support Light Liquid Glass and Dark Liquid Glass.
+8. Make theme switching functional and persistent.
+9. Apply glass styling throughout the application.
+10. Preserve performance and battery life.
+11. Never create fake buttons.
+12. Never create nonfunctional navigation.
+13. Never use fake nutrition calculations.
+14. Never use random dashboard values.
+15. Never simulate AI while claiming real AI integration.
+16. Never claim offline AI without a real local model.
+17. Never expose secret credentials.
+18. Never overwrite user data.
+19. Never remove working features.
+20. Never ignore Persian RTL.
+21. Never leave untranslated screens.
+22. Never claim tests passed without execution.
+23. Never claim production readiness without verification.
+24. Never stop after UI design.
+25. Never stop after architecture documentation.
+26. Prioritize working functionality.
+27. Preserve historical records.
+28. Handle errors gracefully.
+29. Protect user privacy.
+30. Never fabricate nutritional information.
+31. Never invent external integrations.
+32. Respect accessibility.
+33. Never replace unavailable features with fake implementations.
+34. Avoid unnecessary dependencies.
+35. Avoid duplicate project structures.
+36. Never sacrifice functionality for visual effects.
+37. Never sacrifice performance for glass rendering.
+38. Use appropriate fallbacks for devices that cannot support expensive visual effects.
+
+If a feature cannot be completed:
+
+- Implement supported parts.
+- Create appropriate interfaces.
+- Prepare integration points.
+- Document the exact missing dependency.
+- Keep unrelated features operational.
+- Never silently replace a real feature with a fake implementation.
+
+# 36. FINAL DELIVERABLES
+
+Prepare:
+
+1. Complete native Android project.
+2. Kotlin source code.
+3. Jetpack Compose UI.
+4. Liquid Glass design system.
+5. Light theme.
+6. Dark theme.
+7. Theme switching.
+8. Persian localization.
+9. English localization.
+10. Custom Calo Fit glass icon.
+11. Adaptive launcher icon.
+12. Splash screen.
+13. Room database.
+14. DataStore implementation.
+15. Nutrition calculation engine.
+16. Initial offline food database.
+17. AI architecture.
+18. Gemini integration when configured.
+19. Firebase integration when configured.
+20. Barcode scanner when configured.
+21. Meal planner.
+22. Weight and nutrition analytics.
+23. PDF reporting.
+24. Security and privacy implementation.
+25. Unit tests.
+26. UI tests where supported.
+27. Integration tests where supported.
+28. Performance verification report.
+29. Build verification report.
+30. Known limitations report.
+31. Installable application through the available AI Studio workflow.
+32. APK or AAB only if an actual supported export workflow provides it.
+33. Complete downloadable ZIP project.
+34. Technical documentation.
+35. Setup instructions for unavoidable external dependencies.
+
+Keep generated files inside the actual project.
+
+Never invent file paths.
+
+Never claim an artifact was generated unless it exists.
+
+Use the official AI Studio project ZIP export when available.
+
+If direct installation is supported, make the application available for installation.
+
+If APK/AAB export is unavailable, preserve the complete Gradle project and explain the supported export route.
+
+Do not claim ZIP export is an APK.
+
+Do not claim internal testing means public production release.
+
+# 37. FINAL ACCEPTANCE CRITERIA
+
+The application is successfully implemented only when:
+
+- Fresh installation starts with language selection.
+- Persian works.
+- English works.
+- RTL and LTR work.
+- Language persists after restart.
+- Language can be changed without data loss.
+- Onboarding works.
+- Profile is persistent.
+- Nutrition calculations are functional.
+- Food logging works.
+- Local database works.
+- Weight tracking works.
+- Water tracking works.
+- Activity tracking works.
+- Charts use actual records.
+- Offline functionality works.
+- Light Liquid Glass theme works.
+- Dark Liquid Glass theme works.
+- Theme selection persists.
+- All major screens use consistent glass styling.
+- Buttons and controls have correct interactive states.
+- Custom app icon is implemented.
+- Glass visual effects do not cause unacceptable lag.
+- AI works when configured.
+- AI estimates are identified.
+- Manual corrections work.
+- Barcode lookup works when its data source is available.
+- Navigation works.
+- Primary buttons work.
+- Errors are handled.
+- Application compiles successfully.
+- Available tests are executed.
+- Missing dependencies are documented.
+
+Do not confuse implemented, tested, and verified states.
+
+# 38. COMPLETE USER JOURNEY — NON-NEGOTIABLE
+
+Before expanding advanced features, ensure the following journey works:
+
+1. User installs Calo Fit.
+2. User sees the custom glass app icon.
+3. User opens the application.
+4. User sees the branded Liquid Glass splash screen.
+5. User selects Persian or English.
+6. User selects Light, Dark, or System appearance.
+7. User completes onboarding.
+8. User receives nutrition calculations.
+9. User searches the local food database.
+10. User adds food to breakfast, lunch, or dinner.
+11. User sees updated calorie and macronutrient totals.
+12. User records water intake.
+13. User records weight.
+14. User sees actual progress charts.
+15. User changes the appearance to Dark Liquid Glass.
+16. The complete interface changes without losing data.
+17. User closes the application.
+18. User reopens it.
+19. All information remains intact.
+20. User switches to airplane mode.
+21. Core functionality continues working.
+
+This complete journey is more important than the number of implemented features.
+
+The Liquid Glass visual design must remain smooth and responsive throughout the journey.
+
+Do not move forward if the essential journey is broken.
+
+# 39. FINAL EXECUTION INSTRUCTIONS
+
+Begin immediately.
+
+STEP 1: Inspect the actual Google AI Studio Android Build environment.
+
+STEP 2: Verify that Android is selected, not Web.
+
+STEP 3: Inspect the existing project and available integrations.
+
+STEP 4: Inspect the three uploaded visual reference images.
+
+STEP 5: Establish the practical native Android architecture.
+
+STEP 6: Create the Calo Fit visual identity and Liquid Glass design system.
+
+STEP 7: Implement both light and dark themes.
+
+STEP 8: Create the custom app icon and branding assets.
+
+STEP 9: Implement Phase 1.
+
+STEP 10: Compile, run, test, and fix errors.
+
+STEP 11: Inspect actual emulator screens where supported.
+
+STEP 12: Improve the interface based on actual results.
+
+STEP 13: Verify visual consistency and performance.
+
+STEP 14: Continue with subsequent phases without waiting for unnecessary confirmation.
+
+STEP 15: Generate available installation and export artifacts.
+
+STEP 16: Provide an honest implementation report.
+
+Do not spend excessive time explaining what you intend to do.
+
+Show brief progress updates only when useful.
+
+Prioritize actual implementation over planning discussions.
+
+Use autonomous multi-file editing and execution whenever available.
+
+Do not stop after initial implementation.
+
+Inspect the result and improve it.
+
+# 40. ADDITIONAL CRITICAL REQUIREMENT — DO NOT STOP AT A SUPERFICIAL MVP
+
+The first version must be a genuinely usable product, not merely a collection of screens.
+
+The visual identity must also be genuinely implemented, not just described in documentation.
+
+Do not create a flat prototype and claim it has a Liquid Glass design.
+
+Do not apply a single translucent background to the entire application and call it complete.
+
+Build a coherent visual system with reusable materials, components, theme tokens, and consistent interaction states.
+
+At the same time, do not overuse blur, reflections, shadows, or animations.
+
+Prioritize:
+
+1. Usability.
+2. Performance.
+3. Readability.
+4. Visual consistency.
+5. Aesthetic refinement.
+
+# 41. FINAL NON-NEGOTIABLE INSTRUCTION
+
+I do not want a tutorial or a list of instructions.
+
+I want you to perform the actual development work yourself.
+
+Do not ask me to create ordinary project files, write code, install Android Studio, or configure dependencies manually when you can perform those operations.
+
+Do not stop at a beautiful UI.
+
+Build a real, persistent, functional, bilingual native Android application.
+
+Minimize my involvement.
+
+If an external action is genuinely unavoidable, explain:
+
+- What action is required.
+- Why it is required.
+- Exactly where I must perform it.
+- What will become available afterward.
+
+Continue every development task that does not depend on my intervention.
+
+Do not wait for external configuration to complete unrelated features.
+
+Take ownership of implementation, preserve project continuity, verify your work, and deliver the most complete application that the actual environment supports.
+
+**HIGHEST PRIORITY: A POLISHED, RELIABLE, FULLY FUNCTIONAL CALO FIT FOUNDATION WITH NO PERSONAL SERVER.**
+
+**VISUAL IDENTITY: PREMIUM 3D LIQUID GLASS THROUGHOUT THE ENTIRE APPLICATION.**
+
+**THEMES: LIGHT LIQUID GLASS AND DARK LIQUID GLASS.**
+
+**PERFORMANCE: SMOOTH, EFFICIENT, AND OPTIMIZED FOR MID-RANGE ANDROID DEVICES.**
+
+**BUILD WORKING SOFTWARE FIRST. PERFECT THE VISUAL EXPERIENCE SECOND. EXPAND INTO A COMMERCIAL PRODUCT THIRD.**
+
+**DO NOT STOP AT PLANNING. START BUILDING THE ACTUAL APPLICATION NOW.**
